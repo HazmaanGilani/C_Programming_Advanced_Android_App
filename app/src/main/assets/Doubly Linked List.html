@@ -1,0 +1,360 @@
+<div style="background:#ffffff ; overflow:auto;width:auto;padding:.2em .6em;">
+<div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff">
+<span style="color: #226666;padding:.2em .6em">/*C Program to implement Doubly Linked List*/</span>
+</div>
+<pre style="margin: 0; line-height: 125%">
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;background:#ffffff;box-shadow: 1px 1px 1px 1px grey;overflow:scroll;background:#ffffff">
+<span style="color: brown">#include&lt;stdio.h&gt;  </span>
+<span style="color: brown">#include&lt;stdlib.h&gt; </span>
+ 
+struct node
+{
+    struct node *prev;
+    <span style="color: #0067BB; font-weight: bold">int</span> n;
+    struct node *next;
+}*h,*temp,*temp1,*temp2,*temp4;
+ 
+<span style="color: #0067BB; font-weight: bold">void</span> insert1();
+<span style="color: #0067BB; font-weight: bold">void</span> insert2();
+<span style="color: #0067BB; font-weight: bold">void</span> insert3();
+<span style="color: #0067BB; font-weight: bold">void</span> traversebeg();
+<span style="color: #0067BB; font-weight: bold">void</span> traverseend(<span style="color: #0067BB; font-weight: bold">int</span>);
+<span style="color: #0067BB; font-weight: bold">void</span> sort();
+<span style="color: #0067BB; font-weight: bold">void</span> search();
+<span style="color: #0067BB; font-weight: bold">void</span> update();
+<span style="color: #0067BB; font-weight: bold">void</span> delete();
+ 
+<span style="color: #0067BB; font-weight: bold">int</span> count = 0;
+ 
+<span style="color: #0067BB; font-weight: bold">void</span> main()
+{
+    <span style="color: #0067BB; font-weight: bold">int</span> ch;
+ 
+    h = NULL;
+    temp = temp1 = NULL;
+ 
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n 1 - Insert at beginning");
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n 2 - Insert at end");
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n 3 - Insert at position i");
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n 4 - Delete at i");
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n 5 - Display from beginning");
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n 6 - Display from end");
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n 7 - Search for element");
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n 8 - Sort the list");
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n 9 - Update an element");
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n 10 - Exit");
+ 
+    <span style="color: green; font-weight: bold">while</span> (1)
+    {
+        <span style="color: #ff1493; font-weight: bold">printf</span>("\n Enter choice : ");
+        <span style="color: #ff1493; font-weight: bold">scanf</span>("%d", &ch);
+        <span style="color: green; font-weight: bold">switch</span> (ch)
+        {
+        <span style="color: #226666; font-weight: bold">case</span> 1:
+            insert1();
+            break;
+        <span style="color: #226666; font-weight: bold">case</span> 2:
+            insert2();
+            break;
+        <span style="color: #226666; font-weight: bold">case</span> 3:
+            insert3();
+            break;
+        <span style="color: #226666; font-weight: bold">case</span> 4:
+            delete();
+            break;
+        <span style="color: #226666; font-weight: bold">case</span> 5:
+            traversebeg();
+            break;
+        <span style="color: #226666; font-weight: bold">case</span> 6:
+            temp2 = h;
+            if (temp2 == NULL)
+                <span style="color: #ff1493; font-weight: bold">printf</span>("\n Error : List empty to display ");
+            else
+            {
+                <span style="color: #ff1493; font-weight: bold">printf</span>("\n Reverse order of linked list is : ");
+                traverseend(temp2->n);
+            }
+            break;
+        <span style="color: #226666; font-weight: bold">case</span> 7:
+            search();
+            break;
+        <span style="color: #226666; font-weight: bold">case</span> 8:
+            sort();
+            break;
+        <span style="color: #226666; font-weight: bold">case</span> 9:
+            update();
+            break;
+        default:
+            exit(0);
+        
+        }
+    }
+}
+ 
+/* TO create an empty node */
+<span style="color: #0067BB; font-weight: bold">void</span> create()
+{
+    <span style="color: #0067BB; font-weight: bold">int</span> data;
+ 
+    temp =(struct node *)malloc(1*sizeof(struct node));
+    temp->prev = NULL;
+    temp->next = NULL;
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n Enter value to node : ");
+    <span style="color: #ff1493; font-weight: bold">scanf</span>("%d", &data);
+    temp->n = data;
+    count++;
+}
+ 
+/*  TO insert at beginning */
+<span style="color: #0067BB; font-weight: bold">void</span> insert1()
+{
+    if (h == NULL)
+    {
+        create();
+        h = temp;
+        temp1 = h;
+    }
+    else
+    {
+        create();
+        temp->next = h;
+        h->prev = temp;
+        h = temp;
+    }
+}
+ 
+/* To insert at end */
+<span style="color: #0067BB; font-weight: bold">void</span> insert2()
+{
+    if (h == NULL)
+    {
+        create();
+        h = temp;
+        temp1 = h;
+    }
+    else
+    {
+        create();
+        temp1->next = temp;
+        temp->prev = temp1;
+        temp1 = temp;
+    }
+}
+ 
+/* To insert at any position */
+<span style="color: #0067BB; font-weight: bold">void</span> insert3()
+{
+    <span style="color: #0067BB; font-weight: bold">int</span> pos, i = 2;
+ 
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n Enter position to be inserted : ");
+    <span style="color: #ff1493; font-weight: bold">scanf</span>("%d", &pos);
+    temp2 = h;
+ 
+    if ((pos < 1) || (pos >= count + 1))
+    {
+        <span style="color: #ff1493; font-weight: bold">printf</span>("\n Position out of range to insert");
+        return;
+    }
+    if ((h == NULL) && (pos != 1))
+    {
+        <span style="color: #ff1493; font-weight: bold">printf</span>("\n Empty list cannot insert other than 1st position");
+        return;
+    }
+    if ((h == NULL) && (pos == 1))
+    {
+        create();
+        h = temp;
+        temp1 = h;
+        return;
+    }
+    else
+    {
+        <span style="color: green; font-weight: bold">while</span> (i < pos)
+        {
+            temp2 = temp2->next;
+            i++;
+        }
+        create();
+        temp->prev = temp2;
+        temp->next = temp2->next;
+        temp2->next->prev = temp;
+        temp2->next = temp;
+    }
+}
+ 
+/* To delete an element */
+<span style="color: #0067BB; font-weight: bold">void</span> delete()
+{
+    <span style="color: #0067BB; font-weight: bold">int</span> i = 1, pos;
+ 
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n Enter position to be deleted : ");
+    <span style="color: #ff1493; font-weight: bold">scanf</span>("%d", &pos);
+    temp2 = h;
+ 
+    if ((pos < 1) || (pos >= count + 1))
+    {
+        <span style="color: #ff1493; font-weight: bold">printf</span>("\n Error : Position out of range to delete");
+        return;
+    }
+    if (h == NULL)
+    {
+        <span style="color: #ff1493; font-weight: bold">printf</span>("\n Error : Empty list no elements to delete");
+        return;
+    }
+    else
+    {
+        <span style="color: green; font-weight: bold">while</span> (i < pos)
+        {
+            temp2 = temp2->next;
+            i++;
+        }
+        if (i == 1)
+        {
+            if (temp2->next == NULL)
+            {
+                <span style="color: #ff1493; font-weight: bold">printf</span>("Node deleted from list");
+                free(temp2);
+                temp2 = h = NULL;
+                return;
+            }
+        }
+        if (temp2->next == NULL)
+        {
+            temp2->prev->next = NULL;
+            free(temp2);
+            <span style="color: #ff1493; font-weight: bold">printf</span>("Node deleted from list");
+            return;
+        }
+        temp2->next->prev = temp2->prev;
+        if (i != 1)
+            temp2->prev->next = temp2->next;    /* Might not need this statement if i == 1 check */
+        if (i == 1)
+            h = temp2->next;
+        <span style="color: #ff1493; font-weight: bold">printf</span>("\n Node deleted");
+        free(temp2);
+    }
+    count--;
+}
+ 
+/* Traverse from beginning */
+<span style="color: #0067BB; font-weight: bold">void</span> traversebeg()
+{
+    temp2 = h;
+ 
+    if (temp2 == NULL)
+    {
+        <span style="color: #ff1493; font-weight: bold">printf</span>("List empty to display \n");
+        return;
+    }
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n Linked list elements from begining : ");
+ 
+    <span style="color: green; font-weight: bold">while</span> (temp2->next != NULL)
+    {
+        <span style="color: #ff1493; font-weight: bold">printf</span>(" %d ", temp2->n);
+        temp2 = temp2->next;
+    }
+    <span style="color: #ff1493; font-weight: bold">printf</span>(" %d ", temp2->n);
+}
+ 
+/* To traverse from end recursively */
+<span style="color: #0067BB; font-weight: bold">void</span> traverseend(<span style="color: #0067BB; font-weight: bold">int</span> i)
+{
+    if (temp2 != NULL)
+    {
+        i = temp2->n;
+        temp2 = temp2->next;
+        traverseend(i);
+        <span style="color: #ff1493; font-weight: bold">printf</span>(" %d ", i);
+    }
+}
+ 
+/* To search for an element in the list */
+<span style="color: #0067BB; font-weight: bold">void</span> search()
+{
+    <span style="color: #0067BB; font-weight: bold">int</span> data, count = 0;
+    temp2 = h;
+ 
+    if (temp2 == NULL)
+    {
+        <span style="color: #ff1493; font-weight: bold">printf</span>("\n Error : List empty to search for data");
+        return;
+    }
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n Enter value to search : ");
+    <span style="color: #ff1493; font-weight: bold">scanf</span>("%d", &data);
+    <span style="color: green; font-weight: bold">while</span> (temp2 != NULL)
+    {
+        if (temp2->n == data)
+        {
+            <span style="color: #ff1493; font-weight: bold">printf</span>("\n Data found in %d position",count + 1);
+            return;
+        }
+        else
+             temp2 = temp2->next;
+            count++;
+    }
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n Error : %d not found in list", data);
+}
+ 
+/* To update a node value in the list */
+<span style="color: #0067BB; font-weight: bold">void</span> update()
+{
+    <span style="color: #0067BB; font-weight: bold">int</span> data, data1;
+ 
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n Enter node data to be updated : ");
+    <span style="color: #ff1493; font-weight: bold">scanf</span>("%d", &data);
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n Enter new data : ");
+    <span style="color: #ff1493; font-weight: bold">scanf</span>("%d", &data1);
+    temp2 = h;
+    if (temp2 == NULL)
+    {
+        <span style="color: #ff1493; font-weight: bold">printf</span>("\n Error : List empty no node to update");
+        return;
+    }
+    <span style="color: green; font-weight: bold">while</span> (temp2 != NULL)
+    {
+        if (temp2->n == data)
+        {
+ 
+            temp2->n = data1;
+            traversebeg();
+            return;
+        }
+        else
+            temp2 = temp2->next;
+    }
+ 
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n Error : %d not found in list to update", data);
+}
+ 
+/* To sort the linked list */
+<span style="color: #0067BB; font-weight: bold">void</span> sort()
+{
+    <span style="color: #0067BB; font-weight: bold">int</span> i, j, x;
+ 
+    temp2 = h;
+    temp4 = h;
+ 
+    if (temp2 == NULL)
+    {
+        <span style="color: #ff1493; font-weight: bold">printf</span>("\n List empty to sort");
+        return;
+    }
+ 
+    for (temp2 = h; temp2 != NULL; temp2 = temp2->next)
+    {
+        for (temp4 = temp2->next; temp4 != NULL; temp4 = temp4->next)
+        {
+            if (temp2->n > temp4->n)
+            {
+                x = temp2->n;
+                temp2->n = temp4->n;
+                temp4->n = x;
+            }
+        }
+    }
+    traversebeg();
+}
+</div>
+<div style="width:auto;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff;text-align:center;">
+<img src="doll.jpg" width="100%">
+</div></pre></div>

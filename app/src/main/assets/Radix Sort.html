@@ -1,0 +1,88 @@
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+<div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:hidden">
+<span style="color: #226666">/*C Program for RadixSort*/</span>
+</div>
+<pre style="margin: 0; line-height: 125%"> 
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:scroll">
+<span style="color: brown">#include&lt;stdio.h&gt;</span>
+<span style="color: brown">#include&lt;conio.h&gt;</span>
+<span style="color: brown">#define MAX 20</span>
+<span style="color: brown">#define S</span> 
+
+<span style="color: #0067BB; font-weight: bold">void</span> Display(<span style="color: #0067BB; font-weight: bold">int</span> *a, <span style="color: #0067BB; font-weight: bold">int</span> n) 
+
+{
+
+<span style="color: #0067BB; font-weight: bold">int</span> i;
+<span style="color: green; font-weight: bold">for</span> (i = 0; i &lt; n; i++)
+<span style="color: #ff1493; font-weight: bold">printf</span>("%d\t;", a[i]);
+
+} 
+
+<span style="color: #0067BB; font-weight: bold">void</span> radix_sort(<span style="color: #0067BB; font-weight: bold">int</span> *a, <span style="color: #0067BB; font-weight: bold">int</span> n) 
+
+{
+<span style="color: #0067BB; font-weight: bold">int</span> i, b[MAX], m = 0, exp = 1;
+<span style="color: green; font-weight: bold">for</span> (i = 0; i &lt; n; i++) 
+{
+  <span style="color: green; font-weight: bold">if</span> (a[i] &gt; m)
+   m = a[i];
+ }
+   <span style="color: green; font-weight: bold">while</span> (m / exp &gt; 0) 
+ {
+  <span style="color: #0067BB; font-weight: bold">int</span> box[10] = { 0 };
+  <span style="color: green; font-weight: bold">for</span> (i = 0; i &lt; n; i++)
+ box[a[i] / exp % 10]++;
+  <span style="color: green; font-weight: bold">for</span> (i = 1; i &lt; 10; i++)
+ box[i] += box[i - 1];
+  <span style="color: green; font-weight: bold">for</span> (i = n - 1; i &gt;= 0; i--)
+ b[--box[a[i] / exp % 10]] = a[i];
+  <span style="color: green; font-weight: bold">for</span> (i = 0; i &lt; n; i++)
+ a[i] = b[i];
+exp *= 10;
+ 
+<span style="color: red; font-weight: bold">#ifdef</span> S
+
+  <span style="color: #ff1493; font-weight: bold">printf</span>("\n\nPASS   : ");
+
+  Display(a, n);
+
+<span style="color: red; font-weight: bold">#endif</span>
+}
+} 
+<span style="color: #0067BB; font-weight: bold"><span style="color: #0067BB; font-weight: bold">int</span></span> <span style="color: red; font-weight: bold">main()</span> 
+
+{
+
+<span style="color: #0067BB; font-weight: bold">int</span> arr[MAX];
+<span style="color: #0067BB; font-weight: bold">int</span> i, num;	 
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("\nEnter no of elements : ", MAX);
+
+<span style="color: #ff1493; font-weight: bold">scanf</span>("%d", &amp;num);
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("\n Enter %d Elements : ", num);
+
+<span style="color: green; font-weight: bold">for</span> (i = 0; i &lt; num; i++)
+
+<span style="color: #ff1493; font-weight: bold">scanf</span>("%d", &amp;arr[i]);
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("\n ARRAY  : ");
+
+Display(&amp;arr[0], num);
+
+radix_sort(&amp;arr[0], num);
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("\n\n SORTED  : ");
+
+Display(&amp;arr[0], num);
+ 
+<span style="color: brown; font-weight: bold">return 0;</span>
+}
+</div>
+<span style="color: #996700; font-weight: bold">Output:</span>
+<div style="width:auto;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff;text-align:center;">
+<img src="rso.jpg" width="100%">
+</div>
+</pre>
+  </div>

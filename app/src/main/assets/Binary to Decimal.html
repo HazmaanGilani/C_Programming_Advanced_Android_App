@@ -1,0 +1,25 @@
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+<div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:hidden">
+<span style="color: #226666">/*Program to convert binary to decimal */</span>
+</div>
+<pre style="margin: 0; line-height: 125%">
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:scroll">
+<span style="color: brown">#include&lt;stdio.h&gt;</span>
+<span style="color: #0067BB; font-weight: bold">void</span> <span style="color: red; font-weight: bold">main</span>(){
+<span style="color: #0067BB; font-weight: bold">long</span> <span style="color: #0067BB; font-weight: bold">int</span> bn,dn<span style="color: #333333">=</span><span style="color: purple; font-weight: bold">0</span>,j<span style="color: #333333">=</span><span style="color: purple; font-weight: bold">1</span>,remainder;
+printf(<span style="color:#32CD32">&quot;Enter any binary number: &quot;</span>);
+    scanf(<span style="color:#32CD32">&quot;%ld&quot;</span>,<span style="color: #333333">&amp;</span>bn);
+<span style="color: #008800; font-weight: bold">while</span>(bn<span style="color: #333333">!=</span><span style="color: purple; font-weight: bold">0</span>){
+    remainder<span style="color: #333333">=</span>bn<span style="color: #333333">%</span><span style="color: purple; font-weight: bold">10</span>;
+    dn<span style="color: #333333">=</span>dn<span style="color: #333333">+</span>remainder<span style="color: #333333">*</span>j;
+j<span style="color: #333333">=</span>j<span style="color: #333333">*</span><span style="color: purple; font-weight: bold">2</span>;
+bn<span style="color: #333333">=</span>bn<span style="color: #333333">/</span><span style="color: purple; font-weight: bold">10</span>;
+}
+printf(<span style="color:#32CD32">&quot;Equivalent decimal value: %ld&quot;</span>,dn); 
+}
+</div>
+<span style="color: #996700; font-weight: bold">Output:</span>
+<div style="width:auto;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff;text-align:center;">
+<img src="BTD.jpg" width="100%">
+</div>
+</pre></div>

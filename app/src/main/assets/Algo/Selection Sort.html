@@ -1,0 +1,42 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Selection Sort:</span><br>
+In Selection Sort we put the smallest item at the start of the list, then the next smallest item at the second position in the
+list, and so on until the list is in order.<br><br>
+<span style="font-size:22px;color:#226666;">Algorithm for Selection Sort:</span><br>
+<pre style="line-height:120%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+
+for i=0 to N-2 {
+
+set smallest = i
+
+for j=i+1 to N-1 
+{
+
+compare list[smallest] to list[j]
+if list[smallest] == list[j]
+smallest = j
+
+}
+
+swap list[i] and list[smallest]
+
+}
+</pre></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Time Complexity: </span><br><br>
+<span style="font-size:22px;color:#226666;">Best case :</span> O(n^2)<br>
+<span style="font-size:22px;color:#226666;">Average case :</span> O(n^2)<br>
+<span style="font-size:22px;color:#226666;">Worst case :</span> O(n^2)<br>
+</body>

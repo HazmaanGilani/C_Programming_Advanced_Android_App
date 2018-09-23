@@ -1,0 +1,49 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Linear search:</span><br>
+The simplest search algorithm is linear search.In linear search, we look at each item in the list in turn,
+quitting once we find an item that matches the search item or once we've reached the end of the list. Our
+"return value" is the index at which the search item was found, or some indicator that the search item was
+not found in the list.It is also known as sequential search technique.<br><br>
+<span style="font-size:22px;color:#226666;">Algorithm for linear search:</span><br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+for (each item in list) {
+
+compare search item to current item
+
+if match
+
+save index of matching item
+
+break
+
+}
+
+return index of matching item, or -1 if item not found
+</pre></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Performance of linear search</span><br><br>
+
+<span style="font-size:22px;color:violet;">Best case:</span> The best case occurs when the search item is in the first slot in the array. The number of
+comparisons in this case is 1.Thus the best case complexity is:O(1)<br><br>
+<span style="font-size:22px;color:violet;">Worst case:</span> The worst case occurs when the search item is in the last slot in the array, or is not in
+the array. The number of comparisons in this case is equal to the size of the array. If our array has 'N' elements.Then the worst case complexity is:O(N)<br><br>
+<span style="font-size:22px;color:violet;">Average case:</span> On average, the search item will be somewhere in the middle of the array. The number
+of comparisons in this case is approximately N/2 but the number of comparisons are also proportional to the number of
+items in the array.Thus the average case complexity is:O(N)<br><br>
+</div>
+</body>
+
+
+

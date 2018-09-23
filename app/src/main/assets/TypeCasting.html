@@ -1,0 +1,53 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Type Casting:</span> Normally before an operation takes pace both the operands must have the same type. C converts One or both the operands to the appropriate date types by "Type conversion".<br><br> 
+This can be achieved in 3 ways:<br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Implicit Type conversion :</span> In this the data type /Variable of lower type (which holds lower range of values or has lower precision ) is converted to a higher type (which holds higher range of values or has high precision).<br> This type of conversion is also called "promotion".<br><br>
+If a char is converted into int it is called as Internal promotion<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+Eg: int I;<br>
+char C;<br>
+C = "A";<br>
+I = C;</pre><br><br>
+
+Now the int Variable I holds the ASCII code of the char "A" <br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Assignment Type Conversion:</span> If the two Operands in an Assignment operation are of different data types the right side Operand is automatically converted to the data type of the left side.<br><br>
+
+Eg: Let k is an int var & a is a float var <br>
+int k; yes float a; yes<br><br>
+<img src="cast.jpg"><br><br>
+<img src="cast2.jpg"><br><br>
+<img src="cast3.jpg"><br><br>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Explicit Type Conversion:</span> When we want to convent a type forcibly in a way that is different from automatic type conversion, we need to go for explicit type conversion. (type name) expression; Type name is one of the standard data type. Expression may be a constant variable Or an expression this process of conversion is called as casting a value.<br><br><pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+Eg: x = (int) 7.5<br>
+A = (int) 21.3/(int) 4.5<br>
+Y =( int) (a + b)<br>
+P = (double)sum/n<br></pre>
+</div>
+</body>

@@ -1,0 +1,182 @@
+<div style="background:#ffffff ; overflow:auto;width:auto;padding:.2em .6em;">
+<div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff">
+<span style="color: #226666;padding:.2em .6em">/* C Program to Implement Queue Data Structure using Linked List */</span>
+</div>
+
+<pre style="margin: 0; line-height: 125%">
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;background:#ffffff;box-shadow: 1px 1px 1px 1px grey;overflow:scroll;background:#ffffff">
+<span style="color: brown">#include&lt;stdio.h&gt;  </span>
+<span style="color: brown">#include&lt;stdlib.h&gt;  </span>
+ 
+struct node
+{
+    <span style="color: #0067BB; font-weight: bold">int</span> info;
+    struct node *ptr;
+}*front,*rear,*temp,*front1;
+ 
+<span style="color: #0067BB; font-weight: bold">int</span> frontelement();
+<span style="color: #0067BB; font-weight: bold">void</span> enq(<span style="color: #0067BB; font-weight: bold">int</span> data);
+<span style="color: #0067BB; font-weight: bold">void</span> deq();
+<span style="color: #0067BB; font-weight: bold">void</span> empty();
+<span style="color: #0067BB; font-weight: bold">void</span> display();
+<span style="color: #0067BB; font-weight: bold">void</span> create();
+<span style="color: #0067BB; font-weight: bold">void</span> queuesize();
+ 
+<span style="color: #0067BB; font-weight: bold">int</span> count = 0;
+ 
+<span style="color: #0067BB; font-weight: bold">void</span> main()
+{
+    <span style="color: #0067BB; font-weight: bold">int</span> no, ch, e;
+ 
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n 1 - Enque");
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n 2 - Deque");
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n 3 - Front element");
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n 4 - Empty");
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n 5 - Exit");
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n 6 - Display");
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n 7 - Queue size");
+    create();
+    <span style="color: green; font-weight: bold">while</span> (1)
+    {
+        <span style="color: #ff1493; font-weight: bold">printf</span>("\n Enter choice : ");
+        <span style="color: #ff1493; font-weight: bold">scanf</span>("%d", &ch);
+        switch (ch)
+        {
+        <span style="color: #226666; font-weight: bold">case</span> 1:
+            <span style="color: #ff1493; font-weight: bold">printf</span>("Enter data : ");
+            <span style="color: #ff1493; font-weight: bold">scanf</span>("%d", &no);
+            enq(no);
+            break;
+        <span style="color: #226666; font-weight: bold">case</span> 2:
+            deq();
+            break;
+        <span style="color: #226666; font-weight: bold">case</span> 3:
+            e = frontelement();
+            if (e != 0)
+                <span style="color: #ff1493; font-weight: bold">printf</span>("Front element : %d", e);
+            else
+                <span style="color: #ff1493; font-weight: bold">printf</span>("\n No front element in Queue! queue empty");
+            break;
+        <span style="color: #226666; font-weight: bold">case</span> 4:
+            empty();
+            break;
+        <span style="color: #226666; font-weight: bold">case</span> 5:
+            exit(0);
+        <span style="color: #226666; font-weight: bold">case</span> 6:
+            display();
+            break;
+        <span style="color: #226666; font-weight: bold">case</span> 7:
+            queuesize();
+            break;
+        default:
+            <span style="color: #ff1493; font-weight: bold">printf</span>("Wrong choice, Please enter correct choice  ");
+            break;
+        }
+    }
+}
+ 
+
+<span style="color: #0067BB; font-weight: bold">void</span> create()
+{
+    front = rear = NULL;
+}
+ 
+
+<span style="color: #0067BB; font-weight: bold">void</span> queuesize()
+{
+    <span style="color: #ff1493; font-weight: bold">printf</span>("\n Queue size : %d", count);
+}
+ 
+
+<span style="color: #0067BB; font-weight: bold">void</span> enq(<span style="color: #0067BB; font-weight: bold">int</span> data)
+{
+    if (rear == NULL)
+    {
+        rear = (struct node *)malloc(1*sizeof(struct node));
+        rear->ptr = NULL;
+        rear->info = data;
+        front = rear;
+    }
+    else
+    {
+        temp=(struct node *)malloc(1*sizeof(struct node));
+        rear->ptr = temp;
+        temp->info = data;
+        temp->ptr = NULL;
+ 
+        rear = temp;
+    }
+    count++;
+}
+ 
+
+<span style="color: #0067BB; font-weight: bold">void</span> display()
+{
+    front1 = front;
+ 
+    if ((front1 == NULL) && (rear == NULL))
+    {
+        <span style="color: #ff1493; font-weight: bold">printf</span>("Queue empty");
+        return;
+    }
+    <span style="color: green; font-weight: bold">while</span> (front1 != rear)
+    {
+        <span style="color: #ff1493; font-weight: bold">printf</span>("%d ", front1->info);
+        front1 = front1->ptr;
+    }
+    if (front1 == rear)
+        <span style="color: #ff1493; font-weight: bold">printf</span>("%d", front1->info);
+}
+ 
+
+<span style="color: #0067BB; font-weight: bold">void</span> deq()
+{
+    front1 = front;
+ 
+    if (front1 == NULL)
+    {
+        <span style="color: #ff1493; font-weight: bold">printf</span>("\n No elements to display");
+        return;
+    }
+    else
+        if (front1->ptr != NULL)
+        {
+            front1 = front1->ptr;
+            <span style="color: #ff1493; font-weight: bold">printf</span>("\n Dequed data : %d", front->info);
+            free(front);
+            front = front1;
+        }
+        else
+        {
+            <span style="color: #ff1493; font-weight: bold">printf</span>("\n Dequed data : %d", front->info);
+            free(front);
+            front = NULL;
+            rear = NULL;
+        }
+        count--;
+}
+ 
+
+<span style="color: #0067BB; font-weight: bold">int</span> frontelement()
+{
+    if ((front != NULL) && (rear != NULL))
+        return(front->info);
+    else
+        return 0;
+}
+ 
+
+<span style="color: #0067BB; font-weight: bold">void</span> empty()
+{
+     if ((front == NULL) && (rear == NULL))
+        <span style="color: #ff1493; font-weight: bold">printf</span>("\n Queue empty");
+    else
+       <span style="color: #ff1493; font-weight: bold">printf</span>("Queue is not empty");
+
+}
+</div>
+</pre>
+<span style="color: #996700; font-weight: bold">Output:</span>
+<div style="width:95%;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff">
+<img src="quell.jpg" width="100%">
+</div>

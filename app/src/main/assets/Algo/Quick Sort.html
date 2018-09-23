@@ -1,0 +1,59 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Quick Sort:</span>
+Quick sort is a sorting algorithm that uses the idea of divide and conquer. This
+algorithm chooses an element known as pivot element, finds its position in the
+array such that it divides the array into two sub arrays. The elements in the left
+sub array are less than and the elements in the right sub array are greater than the
+dividing element. Then the algorithm is repeated separately for these two sub
+array.<br><br>
+
+<span style="font-size:22px;color:#226666;">Algorithm for Quick sort</span><br>
+<pre style="line-height:130%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+
+Partition (Array A, int LowerBound, int UpperBound);
+{
+
+select a pivot from A[LowerBound]...A[UpperBound];
+reorder A[LowerBound]...A[UpperBound] such that:
+all values to the left of the pivot are <= pivot
+all values to the right of the pivot are >= pivot
+return pivot position;
+
+}
+
+procedure QuickSort (Array A, int LowerBound, int UpperBound);
+{
+
+if LowerBound < UpperBound then
+M = Partition (A, LowerBound, UpperBound);
+QuickSort (A, LowerBound, M - 1);
+QuickSort (A, M, UpperBound);
+
+}
+</pre>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:#226666;">Example:</span><br><br>
+The Diagramic representation for Quick Sort of Array of Elements<br>
+{ 2 , 1 , 8 , 5 , 3 , 7 , 4 }<br><br><br>
+
+<img src="quick.jpg" width="80%">
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Time Complexity:</span><br><br>
+<span style="font-size:22px;color:#226666;">Best case :</span> O (n log n)<br>
+<span style="font-size:22px;color:#226666;">Average case :</span> O (n log n)<br>
+<span style="font-size:22px;color:#226666;">Worst case :</span> O (n^2)<br>
+</body>

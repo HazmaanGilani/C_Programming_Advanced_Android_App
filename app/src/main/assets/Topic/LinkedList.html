@@ -1,0 +1,92 @@
+<script>
+        var dd = 5;
+        var cnt = 0;
+
+        function pre(){
+        	var rotator = document.getElementById('rr');  // change to match image ID
+            var imageDir = '';                          // change to match images folder
+
+
+      var images = ['instlq.jpg','ll1.png','ll2.png', 'll3.png', 'll4.png'];
+ 
+            cnt--;
+
+            var len = images.length;
+            var len = images.length;
+            if (cnt<0) {
+             rr.src = imageDir + images[0];
+             cnt=0;
+
+            }
+            
+            else if (cnt < dd) {
+                rr.src = imageDir + images[cnt];
+            }
+            else if (cnt == len) {
+                rr.src = imageDir + images[0];
+                cnt = 0;
+            }
+            
+        }
+
+        function chng() {
+
+            var rotator = document.getElementById('rr');  // change to match image ID
+            var imageDir = '';                          // change to match images folder
+
+
+       var images = ['instlq.jpg','ll1.png','ll2.png', 'll3.png', 'll4.png'];
+
+            cnt++;
+
+            var len = images.length;
+            if (cnt < dd) {
+                rr.src = imageDir + images[cnt];
+            }
+            else if (cnt == len) {
+                rr.src = imageDir + images[0];
+                cnt = 0;
+            }
+        }
+
+</script>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">LinkedList:</span>
+A linked list is a sequence of items arranged one after another.Each item in list is connected to the next item via a link and together the data element  and the link is called a node.The link is a pointer to the same type of structure.It is Dynamic DataStructure and allocates and de-allocates memory while the program is running.
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;width:auto;text-align:center;">
+<img id="rr" src="instlq.jpg" width="85%" style="padding:10px;margin:10px"></img></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<div style="text-align: center;padding:10px">
+<button id="clickme" onclick="chng();">
+<img src="1.png" height="40px" width="45px">
+</button>
+<button id="clickme" onclick="pre();" >
+<img src="2.png" height="40px" width="45px">
+</button>
+</div><br></div><br>
+
+
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Types of LinkedList:</span><br>
+<span style="font-size:22px;color:violet;">Linear linked list:</span>Each Node has one address part and one data part.last node is not connected to any other node link part of the lart node contains Null.<br>
+<img src="sinll.png" width="100%">
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Doubly LinkedList:</span> Each node has one data part and two link parts.one link part contains the adress of previous element and other contains the address of next element.<br>
+<img src="dbll.png" width="100%">
+<br>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Circular LinkedList:</span> Each node has one data part and one adress part,each node is connected to the next node and the last node is connected to the first node.<br>
+
+<img src="cirll.png" width="100%">
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Application of LinkedList:</span>
+<li>LinkedList is used in the complier for maintainence of symbol table</li>
+<li>LinedList is used to implement other DataStrucures e.g Stack,Queue e.t.c.</li>
+<li>LinkedList is used in multiple precision arithmetic</li>
+</div>
+</body>

@@ -1,0 +1,66 @@
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+ <div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:hidden">
+<span style="color: #226666;font-weight: bold">/*C Program to implement Breadth First Search*/</span>
+</div>
+<pre style="margin: 0; line-height: 125%"> 
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:scroll">
+<span style="color: brown">#include&lt;stdio.h&gt;</span>
+<span style="color: brown">#include&lt;conio.h&gt;</span>
+
+<span style="color: #0067BB; font-weight: bold">int</span> x[20][20],y[20],visited[20],n,i,j,f=0,r=-1;
+
+<span style="color: #0067BB; font-weight: bold">void</span> bfs(<span style="color: #0067BB; font-weight: bold">int</span> v)
+{
+
+ <span style="color: green; font-weight: bold">for</span>(i=1;i<=n;i++)
+  if(x[v][i] && !visited[i])
+   y[++r]=i;
+
+ if(f<=r)
+ {
+
+  visited[y[f]]=1;
+  bfs(y[f++]);
+
+ }
+}
+<span style="color: #0067BB; font-weight: bold">void</span> <span style="color: red; font-weight: bold">main</span>()
+{
+ <span style="color: #0067BB; font-weight: bold">int</span> v;
+ 
+ <span style="color: #ff1493; font-weight: bold">printf</span>("\n Enter the number of vertices:");
+ <span style="color: #ff1493; font-weight: bold">scanf</span>("%d",&n);
+
+ <span style="color: green; font-weight: bold">for</span>(i=1;i<=n;i++)
+ {
+  y[i]=0;
+  visited[i]=0;
+ }
+
+ <span style="color: #ff1493; font-weight: bold">printf</span>("\n Enter graph data in th form of matrix:\n");
+ <span style="color: green; font-weight: bold">for</span>(i=1;i<=n;i++)
+  <span style="color: green; font-weight: bold">for</span>(j=1;j<=n;j++)
+   <span style="color: #ff1493; font-weight: bold">scanf</span>("%d",&x[i][j]);
+
+ <span style="color: #ff1493; font-weight: bold">printf</span>("\n Enter the starting vertex:");
+ <span style="color: #ff1493; font-weight: bold">scanf</span>("%d",&v);
+
+ bfs(v);
+ <span style="color: #ff1493; font-weight: bold">printf</span>("\n The nodes which can be visited:\n");
+ <span style="color: green; font-weight: bold">for</span>(i=1;i<=n;i++)
+  if(visited[i])
+   <span style="color: #ff1493; font-weight: bold">printf</span>("%d\t",i);
+  else
+   <span style="color: #ff1493; font-weight: bold">printf</span>("\n Breadth First Search is not possible");
+ getch();
+}
+</div>
+
+
+<span style="color: #996700; font-weight: bold">Output:</span>
+<div style="width:auto;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff;text-align:center;">
+
+<img src="bfs.jpg" width="100%">
+</div>
+</pre>
+</div>

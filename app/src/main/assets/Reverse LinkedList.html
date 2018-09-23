@@ -1,0 +1,208 @@
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+<div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:hidden">
+<span style="color: #226666">/*C Program to reverse LinkedList*/</span></div>
+
+<pre style="margin: 0; line-height: 100%">
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:scroll">
+<span style="color: brown">#include&lt;stdio.h&gt;</span>
+<span style="color: brown">#include&lt;stdlib.h&gt;</span>
+
+struct node
+
+{
+
+    <span style="color: #0067BB; font-weight: bold">int</span> num;
+
+    struct node *next;
+
+};
+
+ 
+
+<span style="color: #0067BB; font-weight: bold">void</span> create(struct node **);
+
+<span style="color: #0067BB; font-weight: bold">void</span> reverse(struct node **);
+
+<span style="color: #0067BB; font-weight: bold">void</span> release(struct node **);
+
+<span style="color: #0067BB; font-weight: bold">void</span> display(struct node *);
+
+ 
+
+<span style="color: #0067BB; font-weight: bold">int</span> main()
+
+{
+
+    struct node *p = NULL;
+
+    <span style="color: #0067BB; font-weight: bold">int</span> n;
+
+ 
+
+    create(&p);
+
+    <span style="color:#ff1493; font-weight: bold">printf</span>("Linked list is:\n");
+
+    display(p);
+
+    
+
+    reverse(&p);
+
+    <span style="color:#ff1493; font-weight: bold">printf</span>("reversed list is:\n");
+
+    display(p);
+
+    release(&p);
+
+ 
+
+    <span style="color: brown; font-weight: bold">return</span> 0;
+
+}
+
+ 
+
+<span style="color: #0067BB; font-weight: bold">void</span> reverse(struct node **head)
+
+{
+
+    struct node *p, *q, *r;
+
+ 
+
+    p = q = r = *head;
+
+    p = p->next->next;
+
+    q = q->next;
+
+    r->next = NULL;
+
+    q->next = r;
+
+ 
+
+    <span style="color: green; font-weight: bold">while</span> (p != NULL)
+
+    {
+
+        r = q;
+
+        q = p;
+
+        p = p->next;
+
+        q->next = r;
+
+    }
+
+    *head = q;
+
+}
+
+ 
+
+<span style="color: #0067BB; font-weight: bold">void</span> create(struct node **head)
+
+{
+
+    <span style="color: #0067BB; font-weight: bold">int</span> c, ch;
+
+    struct node *temp, *rear;
+
+ 
+
+    <span style="color:green; font-weight: bold">do</span>
+
+    {
+
+        <span style="color:#ff1493; font-weight: bold">printf</span>("Enter data: ");
+
+        <span style="color:#ff1493; font-weight: bold">scanf</span>("%d", &c);
+
+        temp = (struct node *)malloc(sizeof(struct node));
+
+        temp->num = c;
+
+        temp->next = NULL;
+
+        <span style="color:green; font-weight: bold">if</span> (*head == NULL)
+
+        {
+
+            *head = temp;
+
+        }
+
+        <span style="color:green; font-weight: bold">else</span>
+
+        {
+
+            rear->next = temp;
+
+        }
+
+        rear = temp;
+
+        <span style="color:#ff1493; font-weight: bold">printf</span>("1 to continue 0 to exit: ");
+
+        <span style="color:#ff1493; font-weight: bold">scanf</span>("%d", &ch);
+
+    } <span style="color: green; font-weight: bold">while</span> (ch != 0);
+
+    <span style="color:#ff1493; font-weight: bold">printf</span>("\n");
+
+}
+
+ 
+
+<span style="color: #0067BB; font-weight: bold">void</span> display(struct node *p)
+
+{
+
+    <span style="color: green; font-weight: bold">while</span> (p != NULL)
+
+    {
+
+        <span style="color:#ff1493; font-weight: bold">printf</span>("%d\t", p->num);
+
+        p = p->next;
+
+    }
+
+    <span style="color:#ff1493; font-weight: bold">printf</span>("\n");
+
+}
+
+ 
+
+<span style="color: #0067BB; font-weight: bold">void</span> release(struct node **head)
+
+{
+
+    struct node *temp = *head;
+
+    *head = (*head)->next;
+
+    <span style="color: green; font-weight: bold">while</span> ((*head) != NULL)
+
+    {
+
+        free(temp);
+
+        temp = *head;
+
+        (*head) = (*head)->next;
+
+    }
+
+}
+</div>
+
+<span style="color: #996700; font-weight: bold">Output:</span>
+<div style="width:auto;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff;text-align:center;">
+<img src="revlis.jpg" width="100%">
+</div>
+</pre>
+</div>

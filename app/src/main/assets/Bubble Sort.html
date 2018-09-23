@@ -1,0 +1,48 @@
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+
+<div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:hidden">
+<span style="color: #226666">/*C Program for BubbleSort*/</span> 
+</div>
+<pre style="margin: 0; line-height: 250%">
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:scroll">
+<span style="color: brown">#include&lt;stdio.h&gt;</span>
+<span style="color: #0067BB; font-weight: bold">void</span> <span style="color: red; font-weight: bold">bubble_sort</span>(long [], long);
+<span style="color: #0067BB; font-weight: bold">int</span>  <span style="color: red; font-weight: bold">main</span>()
+{
+long array[100], n, c, d, swap;
+ <span style="color: #ff1493; font-weight: bold">printf</span>("Enter number of elements\n");
+<span style="color: #ff1493; font-weight: bold">scanf</span>("%ld", &n);
+ <span style="color: #ff1493; font-weight: bold">printf</span>("Enter %ld integers\n", n);
+  <span style="color: green; font-weight: bold">for</span>(c = 0; c < n; c++)
+<span style="color: #ff1493; font-weight: bold">scanf</span>("%ld", &array[c]);
+<span style="color: red; font-weight: bold">bubble_sort</span>(array, n);
+ <span style="color: #ff1493; font-weight: bold">printf</span>("Sorted list in ascending order:\n");
+  <span style="color: green; font-weight: bold">for</span> ( c = 0 ; c < n ; c++ )
+ <span style="color: #ff1493; font-weight: bold">printf</span>("%ld\n", array[c]);
+ return 0;
+}
+ 
+<span style="color: #0067BB; font-weight: bold">void</span> <span style="color: red; font-weight: bold">bubble_sort</span>(long list[], long n)
+{
+long c, d, t;
+ <span style="color: green; font-weight: bold">for</span> (c = 0 ; c < ( n - 1 ); c++)
+{
+  <span style="color: green; font-weight: bold">for</span> (d = 0 ; d < n - c - 1; d++)
+{
+  <span style="color: green; font-weight: bold">if</span> (list[d] > list[d+1])
+{
+    t= list[d];
+    list[d]= list[d+1];
+     list[d+1] = t;
+       }
+     }
+   }
+}
+</div>
+
+<span style="color: #996700; font-weight: bold">Output:</span>
+<div style="width:auto;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff;text-align:center;">
+<img src="bubs.jpg" width="100%">
+</div>
+</pre>
+</div>

@@ -1,0 +1,125 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Tree Traversal:</span>
+A tree traversal is a method of visiting every node in the tree
+There are four common ways to traverse a binary tree:
+<ol>1. Preorder</ol>
+<ol>2. Inorder</ol>
+<ol>3. Postorder</ol>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Inorder Traversal</span>
+In inorder traversal, the root of each subtree is visited after its left subtree
+has been visited but before the visiting of its right subtree begins. The steps for
+traversing a binary tree in inorder traversal are:
+<ul> Visit the left subtree,in inorder</ul>
+<ul> Visit the root.</ul>
+<ul> Visit the right subtree,in order</ul>
+<span style="font-size:22px;color:#226666;">Algorithm:</span><br><br>
+<pre style="line-height:120%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+void inorder(node *root)
+{
+
+if(root != NULL)
+{
+
+inorder(root->lchild);
+print root -> data;
+inorder(root->rchild);
+
+}
+}
+</pre><br>
+Example:<br><br>
+<div style="text-align:center">
+<img src="treetrav.jpg" width="70%"></div><br>
+The Inorder Traversal of the above Binary Tree is:<br>
+2, 7 , 2 , 6 , 5 , 11, 5 , 9 , 4
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Preorder Traversal:</span>
+In a preorder traversal, each root node is visited before its left and right subtrees are
+traversed. Preorder search is also called backtracking. The steps for traversing a binary
+tree in preorder traversal are:
+<ul> Visit the root.</ul>
+<ul> Visit the left subtree,in preorder</ul>
+<ul> Visit the right subtree,in preorder</ul>
+<span style="font-size:22px;color:#226666;">Algorithm:</span><br><br>
+<pre style="line-height:120%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+void preorder(node *root)
+{
+if( root != NULL )
+{
+print root -> data;
+preorder (root -> lchild);
+preorder (root -> rchild);
+}
+}
+</pre><br>
+<br>
+Example:<br><br>
+<div style="text-align:center">
+<img src="treetrav.jpg" width="70%"></div><br>
+The Preorder Traversal of the above Binary Tree is:<br>
+2, 7 , 5 , 6 , 11, 2 , 5 , 4 , 9
+</div><br>
+
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Postorder Traversal:</span>
+In a postorder traversal, each root is visited after its left and right subtrees have been
+traversed. The steps for traversing a binary tree in postorder traversal are:
+<ul> Visit the left subtree,in postorder</ul>
+<ul> Visit the right subtree,in postorder</ul>
+<ul> Visit the root.</ul>
+<span style="font-size:22px;color:#226666;">Algorithm:</span><br><br>
+<pre style="line-height:120%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+void postorder(node *root)
+{
+if( root != NULL )
+{
+postorder (root -> lchild);
+postorder (root -> rchild);
+print (root -> data);
+}
+}
+</pre><br><br>
+Example:<br><br>
+<div style="text-align:center">
+<img src="treetrav.jpg" width="70%"></div><br>
+The Postorder Traversal of above Binary Tree is:<br>
+2, 5 , 11, 6 , 7 , 4 , 9 , 5 , 2<br>
+</div>
+</body>

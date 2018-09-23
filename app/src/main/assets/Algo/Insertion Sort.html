@@ -1,0 +1,48 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-sha{w:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Insertion Sort: </span><br>
+One of the simplest sorting algorithms is the insertion sort.
+Insertion sort consists of n - 1 passes. From pass p = 2 to p=n, insertion sort
+ensures that the elements in positions 1 through p are in sorted order. Insertion
+sort makes use of the fact those elements in positions 1 through p - 1 are already
+known to be in sorted order.<br><br>
+<span style="font-size:22px;color:#226666;">Algorithm for Insertion Sort:</span><br>
+<pre style="line-height:120%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+
+for i = 2 to i=N {
+
+ Key =  a[i]
+ j =  i-1
+
+ while j is greater than 0 and a[j-1] greater than Key 
+ {
+
+ a[j] = a[j-1]
+ decrement j
+
+ }
+
+ a[j] = Key
+
+ }
+ </pre><br>
+ </div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-sha{w:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">
+Time Complexity:</span><br>
+<span style="font-size:22px;color:#226666;">Worst case:</span> Because of the nested loops, each of which can take n iterations, worst case complexity of insertion sort is
+O(n^2). <br>
+<span style="font-size:22px;color:#226666;">Average case:</span>O(n^2)<br>
+<span style="font-size:22px;color:#226666;">Best case:</span>O(n)
+ </body>

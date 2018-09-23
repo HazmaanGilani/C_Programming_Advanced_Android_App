@@ -1,0 +1,271 @@
+ <div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+ <div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:hidden">
+<span style="color: #226666;font-weight: bold">/*C Program to print Calender*/</span>
+</div>
+<pre style="margin: 0; line-height: 150%"> 
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:scroll">
+<span style="color: brown">#include&lt;stdio.h&gt;</span>
+<span style="color: brown">#include&lt;stdlib.h&gt;</span>
+<span style="color: brown">#define TRUE 1</span>
+<span style="color: brown">#define FALSE 0</span>
+
+<span style="color: #0067BB; font-weight: bold">int</span> get_day_code (<span style="color: #0067BB; font-weight: bold">int</span> year);
+<span style="color: #228866;font-weight: bold">/* day_code :0 = Sun, 1 = Mon, 2=Tue, 3=Wed, 4=Thu, 5=Fri, 6=Sat */</span>
+<span style="color: #0067BB; font-weight: bold">int</span> get_leap_year (<span style="color: #0067BB; font-weight: bold">int</span> year);
+<span style="color: #0067BB; font-weight: bold">void</span> print_calendar (<span style="color:#006699; font-weight: bold">File</span> *fout, <span style="color: #0067BB; font-weight: bold">int</span> year, <span style="color: #0067BB; font-weight: bold">int</span> day_code, <span style="color: #0067BB; font-weight: bold">int</span> leap_year);
+<span style="color: #0067BB; font-weight: bold">int</span> get_year (<span style="color: #0067BB; font-weight: bold">void</span>);
+
+<span style="color: red; font-weight: bold">main</span>()
+{
+
+<span style="color: #0067BB; font-weight: bold">int</span> year, day_code, leap_year; 
+
+<span style="color:#006699; font-weight: bold">File</span> *fout;
+
+fout = fopen ("calendar.txt", "w");
+
+year = get_year();  
+
+day_code = get_day_code (year);
+
+leap_year = get_leap_year (year);
+
+print_calendar(fout, year, day_code, leap_year);
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("Open \'calendar.txt\' to see your calendar...\n");
+
+system("pause");
+ 
+}
+ 
+<span style="color: #0067BB; font-weight: bold">int</span> get_year (<span style="color: #0067BB; font-weight: bold">void</span>)
+{
+<span style="color: #0067BB; font-weight: bold">int</span> year;
+<span style="color: #ff1493; font-weight: bold">printf</span> ("Enter a year: ");
+scanf ("%d", &year);
+return year;
+}  
+<span style="color: #0067BB; font-weight: bold">int</span> get_day_code (<span style="color: #0067BB; font-weight: bold">int</span> year)
+{
+<span style="color: #0067BB; font-weight: bold">int</span> day_code;
+<span style="color: #0067BB; font-weight: bold">int</span> x1, x2, x3;
+x1 = (year - 1.)/ 4.0;
+x2 = (year - 1.)/ 100.;
+x3 = (year - 1.)/ 400.;
+day_code = (year + x1 - x2 + x3) %7;
+return day_code;
+}  
+<span style="color: #0067BB; font-weight: bold">int</span> get_leap_year (<span style="color: #0067BB; font-weight: bold">int</span> year)
+{
+
+if(year% 4==0 && year%100 != 0 || year%400==0)
+return TRUE;
+<span style="color: green; font-weight: bold">else</span> return FALSE;
+
+}
+<span style="color: #0067BB; font-weight: bold">void</span> print_calendar (<span style="color:#006699; font-weight: bold">File</span> *fout, <span style="color: #0067BB; font-weight: bold">int</span> year, <span style="color: #0067BB; font-weight: bold">int</span> day_code, <span style="color: #0067BB; font-weight: bold">int</span> leap_year) 
+{
+<span style="color: #0067BB; font-weight: bold">int</span>  days_in_month,day,month; 
+ <span style="color: #ff1493; font-weight: bold">fprintf</span> (fout," %d", year);
+ <span style="color: green; font-weight: bold">for</span> ( month = 1; month <= 12; month++ ) {
+switch ( month ) { /* print name and set days_in_month */
+<span style="color:#006699; font-weight: bold">case</span> 1:
+ <span style="color: #ff1493; font-weight: bold">fprintf</span>(fout,"\n\nJanuary" );
+ days_in_month = 31;
+ break;
+<span style="color:#006699; font-weight: bold">case</span> 2:
+ <span style="color: #ff1493; font-weight: bold">fprintf</span>(fout,"\n\nFebruary" );
+ days_in_month = leap_year ? 29 : 28;
+ break;
+<span style="color:#006699; font-weight: bold">case</span> 3:
+ <span style="color: #ff1493; font-weight: bold">fprintf</span>(fout, "\n\nMarch" );
+ days_in_month = 31;
+ break;
+<span style="color:#006699; font-weight: bold">case</span> 4:
+ <span style="color: #ff1493; font-weight: bold">fprintf</span>(fout,"\n\nApril" );
+ days_in_month = 30;
+ break;
+<span style="color:#006699; font-weight: bold">case</span> 5:
+ <span style="color: #ff1493; font-weight: bold">fprintf</span>(fout,"\n\nMay" );
+ days_in_month = 31;
+ break;
+<span style="color:#006699; font-weight: bold">case</span> 6:
+ <span style="color: #ff1493; font-weight: bold">fprintf</span>(fout,"\n\nJune" );
+ days_in_month = 30;
+ break;
+<span style="color:#006699; font-weight: bold">case</span> 7:
+ <span style="color: #ff1493; font-weight: bold">fprintf</span>(fout,"\n\nJuly" );
+ days_in_month = 31;
+ break;
+<span style="color:#006699; font-weight: bold">case</span> 8:
+ <span style="color: #ff1493; font-weight: bold">fprintf</span>(fout,"\n\nAugust" );
+ days_in_month = 31;
+ break;
+<span style="color:#006699; font-weight: bold">case</span> 9:
+ <span style="color: #ff1493; font-weight: bold">fprintf</span>(fout,"\n\nSeptember" );
+ days_in_month = 30;
+ break;
+<span style="color:#006699; font-weight: bold">case</span> 10:
+ <span style="color: #ff1493; font-weight: bold">fprintf</span>(fout,"\n\nOctober" );
+ days_in_month = 31;
+ break;
+<span style="color:#006699; font-weight: bold">case</span> 11:
+ <span style="color: #ff1493; font-weight: bold">fprintf</span>(fout,"\n\nNovember" );
+ days_in_month = 30;
+ break;
+<span style="color:#006699; font-weight: bold">case</span> 12:
+ <span style="color: #ff1493; font-weight: bold">fprintf</span>(fout,"\n\nDecember" );
+ days_in_month = 31;
+ break;
+}
+<span style="color: #ff1493; font-weight: bold">fprintf</span>(fout,"\n\nSun  Mon  Tue  Wed  Thu  Fri  Sat\n" );
+
+<span style="color: green; font-weight: bold">for</span> ( day = 1; day <= 1 + day_code * 5; day++ )
+ <span style="color: #ff1493; font-weight: bold">fprintf</span>(fout," " );
+<span style="color: #228866;font-weight: bold">/*  displays dates for one month */</span>
+<span style="color: green; font-weight: bold">for</span> ( day = 1; day <= days_in_month; day++ ) {
+ <span style="color: #ff1493; font-weight: bold">fprintf</span>(fout,"%2d", day );
+ if ( ( day + day_code ) % 7 > 0 ) 
+  
+  <span style="color: #ff1493; font-weight: bold">fprintf</span>(fout,"" );
+ <span style="color: green; font-weight: bold">else</span> 
+ <span style="color: #228866;font-weight: bold"> /* skips to next line to start with Sunday */</span>
+  <span style="color: #ff1493; font-weight: bold">fprintf</span>(fout, "\n " );
+}
+<span style="color: #228866;font-weight: bold">/* set day_code for next month to begin */</span>
+day_code = ( day_code + days_in_month ) % 7;
+ }
+}
+</div>
+
+
+<span style="color: #996700; font-weight: bold">Output:</span>
+<div style="width:auto;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff;text-align:center;">
+
+<img src="calen.jpg" width="100%">
+</div>
+
+
+<span style="color: #996700; font-weight: bold">Calender.txt</span>
+</pre>
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:scroll">
+
+<pre style="margin: 0; line-height: 120%"> 
+
+
+                   1990
+
+January
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+       1    2    3    4    5    6
+  7    8    9   10   11   12   13
+ 14   15   16   17   18   19   20
+ 21   22   23   24   25   26   27
+ 28   29   30   31   
+
+February
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                      1    2    3
+  4    5    6    7    8    9   10
+ 11   12   13   14   15   16   17
+ 18   19   20   21   22   23   24
+ 25   26   27   28   
+
+March
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                      1    2    3
+  4    5    6    7    8    9   10
+ 11   12   13   14   15   16   17
+ 18   19   20   21   22   23   24
+ 25   26   27   28   29   30   31
+ 
+
+April
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+  1    2    3    4    5    6    7
+  8    9   10   11   12   13   14
+ 15   16   17   18   19   20   21
+ 22   23   24   25   26   27   28
+ 29   30   
+
+May
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+            1    2    3    4    5
+  6    7    8    9   10   11   12
+ 13   14   15   16   17   18   19
+ 20   21   22   23   24   25   26
+ 27   28   29   30   31   
+
+June
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                           1    2
+  3    4    5    6    7    8    9
+ 10   11   12   13   14   15   16
+ 17   18   19   20   21   22   23
+ 24   25   26   27   28   29   30
+ 
+
+July
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+  1    2    3    4    5    6    7
+  8    9   10   11   12   13   14
+ 15   16   17   18   19   20   21
+ 22   23   24   25   26   27   28
+ 29   30   31   
+
+August
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                 1    2    3    4
+  5    6    7    8    9   10   11
+ 12   13   14   15   16   17   18
+ 19   20   21   22   23   24   25
+ 26   27   28   29   30   31   
+
+September
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                                1
+  2    3    4    5    6    7    8
+  9   10   11   12   13   14   15
+ 16   17   18   19   20   21   22
+ 23   24   25   26   27   28   29
+ 30   
+
+October
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+       1    2    3    4    5    6
+  7    8    9   10   11   12   13
+ 14   15   16   17   18   19   20
+ 21   22   23   24   25   26   27
+ 28   29   30   31   
+
+November
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                      1    2    3
+  4    5    6    7    8    9   10
+ 11   12   13   14   15   16   17
+ 18   19   20   21   22   23   24
+ 25   26   27   28   29   30   
+
+December
+
+Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                                1
+  2    3    4    5    6    7    8
+  9   10   11   12   13   14   15
+ 16   17   18   19   20   21   22
+ 23   24   25   26   27   28   29
+ 30   31   
+ </div>
+ </pre>
+ </div>

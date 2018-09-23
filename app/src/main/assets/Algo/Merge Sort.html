@@ -1,0 +1,43 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Merge Sort:</span><br> Merge sort is a sorting algorithm that uses the idea of divide
+and conquer. This algorithm divides the array into two halves, sorts them
+separately and then merges them. This procedure is recursive, with the base
+criterion-the number of elements in the array is not more than 1. Suppose variable
+low and high represents the index of the first and last element of the array
+respectively, the merge sort can be defined recursively as:<br><br>
+
+<span style="font-size:22px;color:#226666;">Algorithm for Merge sort</span><br>
+<pre style="line-height:130%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+If(low < high) then
+Divide the list into two halves
+Mergesort the left half
+Mergesort the right half
+Mergesort the two sorted halves into one sorted list
+
+</pre></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:#226666;">Example:</span><br><br>
+The Diagramic representation for Merge Sort of Array of Elements<br>
+{ 1 , 6 , 7 , 2 , 3 , 4 , 8 , 5 }<br>
+
+<img src="merge.jpg" width="80%">
+</div><br>
+
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Time Complexity:</span> <br><br>
+<span style="font-size:22px;color:#226666;">Best case :</span> O (n log n)<br>
+<span style="font-size:22px;color:#226666;">Average case :</span> O (n log n)<br>
+<span style="font-size:22px;color:#226666;">Worst case :</span> O (n log n)<br>
+</body>

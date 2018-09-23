@@ -1,0 +1,33 @@
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+<div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 1px grey;overflow:hidden">
+<span style="color: #226666">/*C Program to write data to File*/</span>
+</div>
+<pre style="margin: 0; line-height: 125%">
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 1px grey;overflow:scroll">
+<span style="color: brown">#include &lt;stdio.h&gt;</span>
+<span style="color: brown">#include&lt;stdlib.h&gt;</span>
+<span style="color: #0067BB; font-weight: bold">int</span> <span style="color: red; font-weight: bold">main</span>()
+{
+   <span style="color: #0067BB; font-weight: bold">char</span> ch[100];
+   <span style="color: #0067BB; font-weight: bold">FILE</span> *fptr;
+
+   <span style="color: green">if</span> ((fptr=fopen("program.txt","r"))==NULL){
+       printf(<span style="color:#32CD32">&quot;Error! opening file&quot;</span>);
+       exit(0);         
+   }
+
+   
+   printf(<span style="color:#32CD32">&quot;Enter a sentence:\n&quot;</span>,ch);
+   gets(ch);
+   fprintf(fptr,"%s",ch);
+   fclose(fptr);
+   
+   <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+</div>
+
+<span style="color: #996700; font-weight: bold">Output:</span>
+<div style="width:auto;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff;text-align:center;">
+<img src="fwri.jpg" width="100%"></div>
+</pre>
+</div>

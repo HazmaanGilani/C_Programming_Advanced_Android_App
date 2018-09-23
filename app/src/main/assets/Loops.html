@@ -1,0 +1,236 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<h1 style="font-size:25px;color:violet;padding:5px 0px 0px 0px;">Loops:</h1>
+<body style="font-size:20px ">
+In the programming often there is a need to perform an action over and
+over ie repeatedly, often with variations in the details each time we
+repeat. This repetitive operation is done through the control structure
+called loop or iteration. There are three types of looping, namely:<br><br>
+1. for loop<br>
+2. while loop<br>
+3. do-while loop<br><br>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">For Loop:</span><br><br>for loop is a block of code that iterates a list of commands as long as
+the loop control condition is true. The syntax of for loop is<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                
+                background-color: #E0E0E0;
+                padding: 15px;
+                white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+for(initialization; Test condition; loop expression)<br>
+statement sequence<br><br>
+</pre>
+<span style="font-size:22px;color:violet;">Syntax explanation:</span><br><br>
+(1) <span style="font-size:22px;color:#226666;">Initialization:</span><br>
+This is some kind of expression which initializes the control variable or
+(index varaible) This statement is carried out only once before the start of
+the loop. e.g. i = 0;<br>
+(2) <span style="font-size:22px;color:#226666;">Condition:</span><br>
+The condition is evaluated at the beginning of every loop and the loop is
+only carried out while this expression is true. e.g. i < 20;<br>
+(3) <span style="font-size:22px;color:#226666;">Loop expression:</span><br>
+This is some kind of expression for altering the value of the control
+variable. This expression is evaluated at the end of each iteration. In C it
+can be absolutely anything. e.g. i++ or i *= 20 or i /= 2.3 ...<br>
+(4) <span style="font-size:22px;color:#226666;">Statement sequence:</span><br>
+Statement sequence can consist only one statement or a group of
+statements. If it contains a group of statements, they must be embraced
+in braces({}).If it contains only one statement , braces need not be
+enclosed.<br><br>
+<span style="font-size:22px;color:violet;">The for Loop Variations</span><br><br>
+For loop is a powerful programming tool. Many variations can be done in
+the for loop. They are listed below.<br><br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+1) for(i=1;i<4; i=i+1)<br></pre>
+Here in the initialization part instead of i=i+1, the statements i++ or
+i+=1 can also be used.<br><br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+2) for(i=1;i<4; )<br>
+{<br>
+Printf(&quot; C programming is fun &quot;);<br>
+i=i+1;<br>
+}<br><br></pre>
+Here in the for loop statement increment is not given, but given in the
+body of the statement. Semicolon after the condition is mandatory.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+3) int i=2;<br>
+for(;i<4; i=i+1)<br>
+Printf(&quot; hello C&quot;);<br>
+Here in the for loop statement initialization is not given, but given
+before the statement. Semicolon before the condition is mandatory.<br><br>
+4) int i=2;<br>
+for(;i<4;)<br>
+{<br>
+Printf(&quot;hello C&quot;);<br>
+i=i+1;<br>
+}<br><br>
+</pre>
+Here in the for loop statement initialization and increment is not given.
+But both the semicolons are mandatory.
+The concept of using a loop within a loop is called nested loop. If a for
+loop contains another for loop statement, such loop is called nested for
+loop.. A nested for loop can contain any number of for loop statements
+within itself. Usually only two loops are used. In this the first loop is called
+outer loop and the second is called inner loop. These types of loops are
+used to create matrix. In this the outer loop is used for counting rows and
+the internal loop is used for counting columns. The syntax and example
+program is given below.<br><br>
+SYNTAX:-<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+for (initializing ; test condition ; increment / decrement)<br>
+{<br>
+statement;<br>
+for (initializing ; test condition ; increment / decrement)<br>
+{<br>
+body of inner loop;<br>
+}<br>
+statement;<br>
+}</pre><br><br>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+
+
+<span style="font-size:22px;color:violet;">While Loop</span><br><br>
+The simplest of the three loops is the while loop. The while-loop has a
+condition and the statements .The syntax is given below.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+while (condition)<br>
+{<br>
+statements;<br>
+}</pre><br><br>
+The condition expression (something like (a > b) etc...) is evaluated first.
+If the expression evaluates to True state i.e returns a nonzero value
+(normally 1) the looping continues; that is, the statements inside the
+statement block are executed. After the execution, the expression is
+evaluated again. The statements are then executed one more time if the
+expression still returns nonzero value. The process is repeated over and
+over until the expression returns 0(False state).
+The statement block, surround by the braces { and }.If there is only one
+statement in the statement block, the braces can be discarded.
+The while loop
+continues to loop while some condition is true. When the condition becomes false, the looping
+is discontinued. It therefore does just what it says it does, the name of the loop being very
+descriptive.<br><br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+main( )<br>
+{<br>
+int count;<br>
+count = 0;<br>
+while (count < 6)<br> {<br>
+printf("The value of count is %d\n",count);<br>
+count = count + 1;<br>
+}<br>
+}</pre><br><br>
+
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Do-while Loop</span><br><br>
+The while and for loops test the termination condition at the beginning of
+the loop. By contrast, the do-while loop, tests at the bottom after making
+each pass through the loop body; the body is always executed at least
+once. The syntax of the do is<br><br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+do<br>
+statement<br>
+while (expression);
+</pre><br><br>
+First the statement is executed under the do clause, then expression in
+the while is evaluated. If it is true, statement is executed and again the
+while is evaluated and this looping process continues. When the
+expression becomes false, the loop terminates. The do-while is much less
+used than while and for. If the statement contains a set of statements,
+they must be enclosed in the braces<br><br>
+
+</div>
+</body>

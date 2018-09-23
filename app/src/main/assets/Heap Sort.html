@@ -1,0 +1,67 @@
+
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+<div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:hidden">
+<span style="color: #226666">/*C Program for HeapSort*/</span></div>
+
+<pre style="margin: 0; line-height: 125%">
+<div style="width:auto;margin:10px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:scroll">
+<span style="color: brown">#include&lt;stdio.h&gt;</span>
+<span style="color: brown">#include&lt;conio.h&gt;</span>
+<span style="color: #0067BB; font-weight: bold">void</span> <span style="color: red; font-weight: bold">main</span>()
+{
+<span style="color: #0067BB; font-weight: bold">int</span> b[10],no,i,j,c,p,temp; 
+<span style="color: #ff1493; font-weight: bold">printf</span>("\n Enter the no of elements:"); 
+<span style="color: #ff1493; font-weight: bold">scanf</span>("%d",&amp;no);
+<span style="color: #ff1493; font-weight: bold">printf</span>(" Enter the elements:"); 
+<span style="color: green; font-weight: bold">for</span>(i=0;i&lt;no;i++)
+<span style="color: #ff1493; font-weight: bold">scanf</span>("%d",&amp;b[i]); 
+<span style="color: green; font-weight: bold">for</span>(i=1;i&lt;no;i++)
+{
+ c=i;  
+<span style="color: green; font-weight: bold">do</span>
+{
+p=(c-1)/2; 
+<span style="color: green; font-weight: bold">if</span>(b[p]&lt;b[c]) 
+{  
+temp=b[p]; 
+  b[p]=b[c]; 
+  b[c]=temp; 
+}
+c=p;
+}
+<span style="color: green; font-weight: bold">while</span>(c!=0); 
+}
+<span style="color: green; font-weight: bold">for</span>(j=no-1;j&gt;=0;j--)
+{  
+ temp=b[0]; 
+  b[0]=b[j]; 
+  b[j]=temp;
+  p=0; 
+
+ <span style="color: green; font-weight: bold">do</span>
+ {
+c=2*p+1;
+<span style="color: green; font-weight: bold">if</span>((b[c]&lt;b[c+1]) &amp;&amp; c&lt;j-1) 
+ c++;
+<span style="color: green; font-weight: bold">if</span>(b[p]&lt;b[c] &amp;&amp; c&lt;j) 
+{
+ temp=b[p]; 
+ b[p]=b[c]; 
+ b[c]=temp; 
+}
+  p=c;
+}<span style="color: green; font-weight: bold">while</span>(c&lt;j);  
+ }
+  <span style="color: #ff1493; font-weight: bold">printf</span>(" The sorted nos are:"); 
+  <span style="color: green; font-weight: bold">for</span>(i=0;i&lt;no;i++)
+  <span style="color: #ff1493; font-weight: bold">printf</span>("%d\t",b[i]); 
+getch(); 
+  }
+  </div>
+
+<span style="color: #996700; font-weight: bold">Output:</span>
+<div style="width:auto;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff;text-align:center;">
+<img src="heso.jpg" width="100%">
+</div>
+</pre>
+</div> 

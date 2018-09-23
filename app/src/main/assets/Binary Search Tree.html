@@ -1,0 +1,210 @@
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+<div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:hidden">
+<span style="color: #226666">/* C program to implement binary search tree */</span>
+</div>
+<pre style="margin: 0; line-height: 160%">
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:scroll">
+<span style="color: brown">#include &lt;stdio.h></span>
+<span style="color: brown">#include &lt;conio.h></span>
+<span style="color: brown">#include &lt;malloc.h></span>
+
+ struct node
+       {
+       	
+         <span style="color: #0067BB; font-weight: bold">int</span> data;
+         struct node *lc,*rc;
+         
+       };
+
+  typedef struct node NODE;
+
+  <span style="color: #0067BB; font-weight: bold">void</span> create(NODE **,<span style="color: #0067BB; font-weight: bold">int</span>);
+  <span style="color: #0067BB; font-weight: bold">void</span> inorder(NODE *);
+  <span style="color: #0067BB; font-weight: bold">void</span> search(NODE * ,<span style="color: #0067BB; font-weight: bold">int</span>);
+  <span style="color: #0067BB; font-weight: bold">void</span> del(NODE **,<span style="color: #0067BB; font-weight: bold">int</span>);
+  <span style="color: #0067BB; font-weight: bold">void</span> chk_node(NODE **,<span style="color: #0067BB; font-weight: bold">int</span>,NODE **,NODE **,<span style="color: #0067BB; font-weight: bold">int</span>*);
+
+
+ <span style="color: #0067BB; font-weight: bold">void</span> main()
+     {
+       NODE *root=NULL;
+       <span style="color: #0067BB; font-weight: bold">int</span> data;
+       <span style="color: #0067BB; font-weight: bold">char</span> ch;
+       <span style="color: #ff1493; font-weight: bold">printf</span>("Enter the Root element:   ");
+       <span style="color: #ff1493; font-weight: bold">scanf</span>("%d",&data);
+       create(&root,data);
+    <span style="color: green; font-weight: bold">while</span>(1)
+     {
+      <span style="color: #ff1493; font-weight: bold">printf</span>("\n1.Insert.");
+      <span style="color: #ff1493; font-weight: bold">printf</span>("\n2.Search.");
+      <span style="color: #ff1493; font-weight: bold">printf</span>("\n3.Delete.");
+      <span style="color: #ff1493; font-weight: bold">printf</span>("\n4.Display.");
+      <span style="color: #ff1493; font-weight: bold">printf</span>("\n5.Exit\n");
+      <span style="color: #ff1493; font-weight: bold">printf</span>("\nEnter your choice:   ");
+      <span style="color: #226666; font-weight: bold">fflush</span>(stdin);
+      <span style="color: #ff1493; font-weight: bold">scanf</span>("%c",&ch);
+       switch(ch)
+        {
+         <span style="color: #226666; font-weight: bold">case</span> '1':
+              <span style="color: #ff1493; font-weight: bold">printf</span>("\nEnter the data :    ");
+              <span style="color: #ff1493; font-weight: bold">scanf</span>("%d",&data);
+              create(&root,data);
+              break;
+         <span style="color: #226666; font-weight: bold">case</span> '2':
+              <span style="color: #ff1493; font-weight: bold">printf</span>("\nEnter the element to search:    ");
+              <span style="color: #ff1493; font-weight: bold">scanf</span>("%d",&data);
+              search(root,data);
+              break;
+         <span style="color: #226666; font-weight: bold">case</span> '3':
+              <span style="color: #ff1493; font-weight: bold">printf</span>("\nEnter the element to delete:    ");
+              <span style="color: #ff1493; font-weight: bold">scanf</span>("%d",&data);
+              del(&root,data);
+              break;
+         <span style="color: #226666; font-weight: bold">case</span> '4':
+              <span style="color: #ff1493; font-weight: bold">printf</span>("\nIn-order Traversal:\n");
+              inorder(root);
+              break;
+         <span style="color: #226666; font-weight: bold">case</span> '5':
+              exit(1);
+         default:
+             <span style="color: #ff1493; font-weight: bold">printf</span>("\nWrong Choice.");
+        }
+     }
+  }
+
+<span style="color: #226666">/* function to create binary search tree */</span>
+
+<span style="color: #0067BB; font-weight: bold">void</span> create(NODE **root,<span style="color: #0067BB; font-weight: bold">int</span> d)
+     {
+
+       <span style="color: green; font-weight: bold">if</span>(*root==NULL)
+      {
+        *root=(NODE *)malloc(sizeof(NODE));
+        (*root)->data=d;
+        (*root)->lc=NULL;
+        (*root)->rc=NULL;
+        return;
+      }
+    <span style="color: green; font-weight: bold">else</span>
+      {
+        <span style="color: green; font-weight: bold">if</span>( d < (*root)->data )
+           create(&((*root)->lc),d);
+        <span style="color: green; font-weight: bold">if</span>( d > (*root)->data )
+           create(&((*root)->rc),d);
+        <span style="color: green; font-weight: bold">if</span>( d == (*root)->data )
+           <span style="color: #ff1493; font-weight: bold">printf</span>("\nData already exist.");
+       }
+     }
+
+<span style="color: #226666">/* Funtion for in-order Traversal */</span>
+
+<span style="color: #0067BB; font-weight: bold">void</span> inorder(NODE *root)
+      {
+    <span style="color: green; font-weight: bold">if</span>(root!=NULL)
+     {
+       inorder(root->lc);
+       <span style="color: #ff1493; font-weight: bold">printf</span>("%4d",root->data);
+       inorder(root->rc);
+     }
+    }
+
+<span style="color: #226666">/* Function to search a node in binary search tree */</span>
+
+<span style="color: #0067BB; font-weight: bold">void</span> search(NODE *root,<span style="color: #0067BB; font-weight: bold">int</span> d)
+     {
+      <span style="color: green; font-weight: bold">if</span>(root!=NULL)
+       {
+         <span style="color: green; font-weight: bold">if</span>( d < root->data )
+           search(root->lc,d);
+         <span style="color: green; font-weight: bold">if</span>( d > root->data )
+           search(root->rc,d);
+         <span style="color: green; font-weight: bold">if</span>( d == root->data )
+           <span style="color: #ff1493; font-weight: bold">printf</span>("\nData Found");
+       }
+      <span style="color: green; font-weight: bold">else</span>
+       <span style="color: #ff1493; font-weight: bold">printf</span>("\nData not Found");
+     }
+
+<span style="color: #226666">/* Function to delete a node from binary search tree */</span>
+
+<span style="color: #0067BB; font-weight: bold">void</span> del(NODE **root,<span style="color: #0067BB; font-weight: bold">int</span> n)
+ {
+   <span style="color: #0067BB; font-weight: bold">int</span> found;
+   NODE *parent,*x,*xsucc;
+
+   <span style="color: green; font-weight: bold">if</span>(*root==NULL)
+      <span style="color: #ff1493; font-weight: bold">printf</span>("\nTree is empty");
+   parent=x=NULL;
+
+   chk_node(root,n,&parent,&x,&found);
+
+   <span style="color: green; font-weight: bold">if</span>(found==0)
+     <span style="color: #ff1493; font-weight: bold">printf</span>("\nNot Found!\n");
+   <span style="color: green; font-weight: bold">if</span>(x->lc!=NULL && x->rc!=NULL)
+     {
+    parent=x;
+    xsucc=x->rc;
+
+     <span style="color: green; font-weight: bold">while</span>(xsucc->lc!=NULL)
+       {
+         parent=xsucc;
+         xsucc=xsucc->lc;
+       }
+     x->data=xsucc->data;
+     x=xsucc;
+     }
+     <span style="color: green; font-weight: bold">if</span>(x->lc==NULL && x->rc==NULL)
+    {
+       <span style="color: green; font-weight: bold">if</span>(parent->rc==x)
+           parent->rc=NULL;
+       <span style="color: green; font-weight: bold">else</span>
+           parent->lc=NULL;      
+     }
+     <span style="color: green; font-weight: bold">if</span>(x->lc==NULL && x->rc!=NULL)
+     {
+        <span style="color: green; font-weight: bold">if</span>(parent->lc==x)
+           parent->lc=x->rc;
+        <span style="color: green; font-weight: bold">else</span>
+           parent->rc=x->rc;        
+     }
+     <span style="color: green; font-weight: bold">if</span>(x->lc!=NULL && x->rc==NULL)
+      {
+         <span style="color: green; font-weight: bold">if</span>(parent->lc==x)
+        parent->lc=x->lc;
+         <span style="color: green; font-weight: bold">else</span>
+        parent->rc=x->lc;        
+       }
+  }
+
+<span style="color: #226666">/* function to check the availability of any node */</span>
+
+<span style="color: #0067BB; font-weight: bold">void</span> chk_node(NODE **root,<span style="color: #0067BB; font-weight: bold">int</span> n,NODE **par,NODE **x,<span style="color: #0067BB; font-weight: bold">int</span> *found)
+  {
+    NODE *q;
+
+    q=*root;
+    *found=0;
+    *par=NULL;
+
+    <span style="color: green; font-weight: bold">while</span>(q!=NULL)
+       {
+        <span style="color: green; font-weight: bold">if</span>(q->data==n)
+         {
+            *found=1;
+            *x=q;
+            return;
+         }
+            *par=q;
+        
+        <span style="color: green; font-weight: bold">if</span>(q->data>n)
+            q=q->lc;
+
+        <span style="color: green; font-weight: bold">else</span>
+            q=q->rc;
+       }
+  }
+
+</div>
+<div style="width:auto;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff;text-align:center;">
+<img src="bisetr.jpg" width="100%">
+</div></pre></div>

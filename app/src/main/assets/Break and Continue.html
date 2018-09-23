@@ -1,0 +1,168 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Break Statement:</span><br>
+The break statement is used to terminate loops or to exit from a switch. It
+is used within loop structures namely for, while, do-while and switch
+statement.<br>
+The syntax of break statement is<br>
+break;<br>
+The break statement is without any embedded expressions or
+statements. The break statement is frequently used to terminate the
+processing of a particular case within a switch statement<br><br>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Break Statement Within Loops</span><br>
+statement following the loop. A break within a loop is generally protected
+within an if statement. This provides control towards the exit condition.
+This depicted in the below example.<br>
+Example : The following examples illustrate the use of the break
+statement in loops.<br><br>
+<pre style="line-height:80%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+1) while (<expression>) {<br>
+<statement><br>
+<statement><br>
+if (<condition which can only be evaluated here>)<br>
+break;<br>
+<statement><br>
+<statement><br>
+}<br>
+// control jumps down here on the break<br>
+</statement><br></pre>
+<pre style="line-height:80%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+/* a program to illustrate the function of break statement inside a for
+loop. */<br>
+#include <stdio.h><br>
+int main()<br>
+{<br>
+int i;<br>
+for (i = 1; i < 10; i++)<br>
+{<br>
+printf_s("%d\n", i);<br>
+if (i == 4)<br>
+break;<br>
+}<br>
+}<br><br>
+</pre>
+<pre style="line-height:80%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+output:<br>
+1<br>
+2<br>
+3<br>
+4<br>
+</pre>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Continue Statement</span>
+Instead of breaking a loop, a need to stay in the loop but skip over some
+statements within the loop may occur. To do this, the continue statement
+is used. The continue statement takes the control to the beginning of the
+loop bypassing the statements inside the loop which have not yet been
+executed. The continue statement can only be used within the body of a
+while, do, or for statement. For better control over the program, like a
+break statement, continue is generally used in conjunction with if
+structure within loops. When continue is used the next iteration of a do,
+for, or while statement is determined as follows:
+ In a while loop, jump to the test statement.
+ In a do while loop, jump to the test statement.
+ In a for loop, jump to the test, and perform the iteration. Then the
+compiler reevaluates the conditional expression and, depending on
+the result, either terminates or iterates the statement body<br><br>
+<pre style="line-height:80%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+while (<expression>)<br>
+{<br>
+...<br>
+if (<condition>)<br>
+continue;<br>
+...<br>
+...<br>
+// control jumps here on the continue<br>
+}<br>
+</pre><br>
+<pre style="line-height:80%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+/* Using the continue statement */<br>
+#include <stdio.h><br>
+main()<br>
+{<br>
+int i, sum;<br>
+sum = 0;<br>
+for (i=1; i<8; i++)<br>
+{<br>
+if ((i==3) || (i==5))<br>
+continue;<br>
+sum += i;<br>
+}<br>
+printf("The sum of 1, 2, 4, 6, and 7 is: %d\n", sum);<br>
+}<br>
+</pre>
+<pre style="line-height:80%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+OUTPUT<br>
+The sum of 1, 2, 4, 6, and 7 is: 20
+</pre>
+</div>
+</body>

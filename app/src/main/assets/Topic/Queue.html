@@ -1,0 +1,100 @@
+<script>
+        var dd = 9;
+        var cnt = 0;
+
+        function pre(){
+        	var rotator = document.getElementById('rr');  // change to match image ID
+            var imageDir = '';                          // change to match images folder
+
+
+            var images = ['instq.jpg','q1.jpg','q2.jpg', 'q3.jpg', 'q4.jpg','q5.jpg','q6.jpg','q7.jpg','q8.jpg'];
+
+            cnt--;
+
+            var len = images.length;
+            var len = images.length;
+            if (cnt<0) {
+             rr.src = imageDir + images[0];
+             cnt=0;
+
+            }
+        
+            else if (cnt < dd) {
+                rr.src = imageDir + images[cnt];
+            }
+            else if (cnt == len) {
+                rr.src = imageDir + images[0];
+                cnt = 0;
+            }
+        }
+
+        function chng() {
+
+            var rotator = document.getElementById('rr');  // change to match image ID
+            var imageDir = '';                          // change to match images folder
+
+
+       var images = ['instq.jpg','q1.jpg','q2.jpg', 'q3.jpg', 'q4.jpg','q5.jpg','q6.jpg','q7.jpg','q8.jpg'];
+
+            cnt++;
+
+            var len = images.length;
+            if (cnt < dd) {
+                rr.src = imageDir + images[cnt];
+            }
+            else if (cnt == len) {
+                rr.src = imageDir + images[0];
+                cnt = 0;
+            }
+        }
+</script>
+
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Queue:</span><br>
+A queue is a Linear Data strucure, where items are inserted at one end called the
+rear and are deleted at the other end called the front.It is also known as FIFO(First-in,first-out),
+Queue is an Abstract Datatype.<br><br>
+It supports two main operations:
+<li>enqueue: inserts an element at the rear end of the queue.</li>
+<li>dequeue: deletes an element at the front end of the queue</li>
+</div><br>
+
+
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;width:auto;text-align:center;">
+
+<img id="rr" src="instq.jpg" width="85%" style="padding:10px;margin:10px"></img></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<div style="text-align: center;padding:10px">
+<button id="clickme" onclick="chng();">
+<img src="1.png" height="40px" width="45px">
+</button>
+<button id="clickme" onclick="pre();" >
+<img src="2.png" height="40px" width="45px">
+</button>
+</div><br></div><br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+<span style="font-size:22px;color:violet;">Note:</span>As clear from the above animation once the queue is full, even though we delete elements at index 0 and 1 from the "front" and relieve some occupied space,access to memory at index 0 and 1 is lost,This is the drawback of Single Ended Queue,To overcome this Drawback Circular Queue or Ring Queue is used.
+</pre><br>
+
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Application of Queue:</span>
+<li>It is used to schedule the jobs to be processed by the CPU.
+<li>It is used to manage printer Buffer.
+<li>It is used in transmitting information packets in computer networks.
+<li>It is used in Breadth First Search Algorithm.e.t.c.
+</div><br>
+
+</body>
+

@@ -1,0 +1,77 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Pointer Arithmetic: </span>An integer operand can be used with a pointer to move it to a point / refer to some other address in the memory. consider an int type ptr as follows<br><br>
+<img src="ptr1.jpg"><br>
+Assume that it is allotted the memory address 65494 increment value by 1 as follows .
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+ mptr ++;    or       ++ mptr; 
+ mptr = mptr +1; or   mptr + =1 ;
+ </pre><br>
+ ++ and - - operators are used to increment, decrement a ptr and commonly used to move the ptr to next location. Now the pointer will refer to the next location in the memory with address 64596. C language automatically adds the size of int type (2 bytes) to move the ptr to next memory location. <br>
+ <pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+ mptr = mtpr + 1<br>
+ = 64594 + 1 * sizeof (int) <br>
+ = 65494 + 1 * 2<br>
+ </pre>
+ Similarly an integer can be added or subtract to move the pointer to any location in RAM. But the resultant address is dependent on the size of data type of ptr.<br><br>
+ The step in which the ptr is increased or reduced is called scale factor.Scale factor is nothing but the size of data type used in a computer.<br>
+ <br>
+ <pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+ The size of float = 4
+ char = 1 
+ double = 8 and so on
+ Ex: float *xp; (assume its address = 63498)
+ xp = xp + 5;
+ Will more the ptr to the address 63518
+ 63498 + 5 * size of (float)
+ 63498 + 5*4
+ 63498+20
+ 63518
+</pre><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+ <span style="font-size:22px;color:violet;">Rules for pointer operation:</span> The following rules apply when performing operations on pointer variables<br><br>
+1. A pointer variable can be assigned to address of another variable.<br>
+2. A pointer variable can be assigned the values of another pointer variables.<br>
+3. A pointer variable can be initialized with NULL or 0 value.<br>
+4. A pointer variable can be prefixed or postfixed with increment and decrement operator.<br>
+5. An integer value may be added or subtracted from a pointer variable.<br>
+6. When 2 pointers points to the same array, one pointer variable can be subtracted from another.<br>
+7. when two pointers points to the objects of save data types, they can be compared using relational .<br>
+8. A pointer variable cannot be multiple by a constant.<br>
+9. Two pointer variables cannot be added.<br>
+10. A value cannot be assigned to an arbitrary address.<br>
+</div>
+</body>

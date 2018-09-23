@@ -1,0 +1,104 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">File:</span><br>A file represents a sequence of bytes on the disk where a group of related data is stored. File is
+created for permanent storage of data.<br>
+In C language, we use a structure pointer of file type to declare a file.<br>
+FILE *fp;<br><br>
+
+C provides a number of functions that helps to perform basic file operations. Following are the
+functions,<br><br>
+<pre style="line-height:110%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+<table cellspacing="10px">
+<tr><td style="font-size:16px;color:#226666">Function         <td style="font-size:16px;color:#226666">Description</tr>
+<tr><td>fopen()       <td>create a new file or open a existing file</tr>
+<tr><td>fclose()      <td>closes a file</tr>
+<tr><td>getc()        <td>reads a character from a file</tr>
+<tr><td>putc()        <td>writes a character to a file</tr>
+<tr><td>fscanf()      <td>reads a set of data from a file</tr>
+<tr><td>fprintf()     <td>writes a set of data to a file</tr>
+<tr><td>getw()        <td>reads a integer from a file</tr>
+<tr><td>putw()        <td>writes a integer to a file</tr>
+<tr><td>fseek()       <td>set the position to desire point</tr>
+<tr><td>ftell()       <td>gives current position in the file</tr>
+<tr><td>rewind()      <td>set the position to the beginning point</tr>
+</table></pre><br><br>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Creating a File:</span><br><br>
+The fopen() function is used to create a new file or to open an existing file.<br><br>
+General Syntax :<br><br>
+*fp = FILE *fopen(const char *filename, const char *mode);<br>
+Here filename is the name of the file to be opened and mode specifies the purpose of opening
+the file. Mode can be of following types,<br>
+*fp is the FILE pointer (FILE *fp), which will hold the reference to the opened (or created)
+file.<br><br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+<table cellspacing="10px">             
+<tr><td style="font-size:16px;color:#226666">Mode    <td style="font-size:18px;color:#226666"> Description
+<tr><td>r       <td>opens a text file in reading mode
+<tr><td>w       <td>opens or create a text file in writing mode.
+<tr><td>a       <td>opens a text file in append mode
+<tr><td>r+      <td>opens a text file in both reading and writing mode
+<tr><td>w+      <td>opens a text file in both reading and writing mode
+<tr><td>a+      <td>opens a text file in both reading and writing mode
+<tr><td>rb      <td>opens a binary file in reading mode
+<tr><td>wb      <td>opens or create a binary file in writing mode
+<tr><td>ab      <td>opens a binary file in append mode
+<tr><td>rb+     <td>opens a binary file in both reading and writing mode
+<tr><td>wb+     <td>opens a binary file in both reading and writing mode
+<tr><td>ab+     <td>opens a binary file in both reading and writing mode
+</table>
+</pre><br><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Closing a File</span><br><br>
+The fclose() function is used to close an already opened file.<br><br>
+General Syntax :<br><br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+int fclose( FILE *fp );
+</pre><br>
+Here fclose() function closes the file and returns zero on success, or EOF if there is an error in
+closing the file. This EOF is a constant defined in the header file stdio.h.<br><br>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+
+fseek(), ftell() and rewind() functions:<br><br>
+<ul>
+<li><span style="font-size:22px;color:#226666;"> fseek() </span>- It is used to move the reading control to different positions.</li><br>
+<li><span style="font-size:22px;color:#226666;">ftell() </span>- It tells the byte location of current position of cursor in file pointer.</li><br>
+<li><span style="font-size:22px;color:#226666;">rewind()</span> - It moves the control to beginning of the file.</li><br>
+</ul>
+</div>
+</body>

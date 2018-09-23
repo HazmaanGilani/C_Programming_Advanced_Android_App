@@ -1,0 +1,41 @@
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+<div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:hidden">
+<span style="color: #226666">/*C Program calculate roots of a quadratic equation*/</span>
+</div>
+<pre style="margin: 0; line-height: 125%">
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:scroll">
+<span style="color: brown">#include&lt;stdio.h&gt;</span>
+<span style="color: brown">#include&lt;math.h&gt;</span>
+<span style="color: #0067BB; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+  <span style="color: #0067BB; font-weight: bold">float</span> a,b,c;
+  <span style="color: #0067BB; font-weight: bold">float</span> d,root1,root2; 
+  printf(<span style="color:#32CD32">&quot;Enter a, b and c of quadratic equation: &quot;</span>); 
+  scanf(<span style="color:#32CD32">&quot;%f%f%f&quot;</span>,<span style="color: #333333">&amp;</span>a,<span style="color: #333333">&amp;</span>b,<span style="color: #333333">&amp;</span>c);
+  d <span style="color: #333333">=</span> b <span style="color: #333333">*</span> b <span style="color: #333333">-</span> <span style="color: purple; font-weight: bold">4</span> <span style="color: #333333">*</span> a <span style="color: #333333">*</span> c;
+  <span style="color: #008800; font-weight: bold">if</span>(d <span style="color: #333333">&lt;</span> <span style="color: purple; font-weight: bold">0</span>){
+    printf(<span style="color:#32CD32">&quot;Roots are complex number.</span><span style="color: #666666; font-weight: bold; color:#32CD32">\n</span><span style="color:#32CD32">&quot;</span>);
+    printf(<span style="color:#32CD32">&quot;Roots of quadratic equation are: &quot;</span>);
+    printf(<span style="color:#32CD32">&quot;%.3f%+.3fi&quot;</span>,<span style="color: #333333">-</span>b<span style="color: #333333">/</span>(<span style="color: purple; font-weight: bold">2</span><span style="color: #333333">*</span>a),sqrt(<span style="color: #333333">-</span>d)<span style="color: #333333">/</span>(<span style="color: purple; font-weight: bold">2</span><span style="color: #333333">*</span>a));
+    printf(<span style="color:#32CD32">&quot;, %.3f%+.3fi&quot;</span>,<span style="color: #333333">-</span>b<span style="color: #333333">/</span>(<span style="color: purple; font-weight: bold">2</span><span style="color: #333333">*</span>a),<span style="color: #333333">-</span>sqrt(<span style="color: #333333">-</span>d)<span style="color: #333333">/</span>(<span style="color: purple; font-weight: bold">2</span><span style="color: #333333">*</span>a));
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: purple; font-weight: bold">0</span>;  
+  }
+  <span style="color: #008800; font-weight: bold">else</span> <span style="color: #008800; font-weight: bold">if</span>(d<span style="color: #333333">==</span><span style="color: purple; font-weight: bold">0</span>){
+   printf(<span style="color:#32CD32">&quot;Both roots are equal.</span><span style="color: #666666; font-weight: bold; color:#32CD32">\n</span><span style="color:#32CD32">&quot;</span>);
+   root1 <span style="color: #333333">=</span> <span style="color: #333333">-</span>b <span style="color: #333333">/</span>(<span style="color: purple; font-weight: bold">2</span><span style="color: #333333">*</span> a);
+   printf(<span style="color:#32CD32">&quot;Root of quadratic equation is: %.3f &quot;</span>,root1); 
+   <span style="color: #008800; font-weight: bold">return</span> <span style="color: purple; font-weight: bold">0</span>;
+  }
+  <span style="color: #008800; font-weight: bold">else</span>{
+   printf(<span style="color:#32CD32">&quot;Roots are real numbers.</span><span style="color: #666666; font-weight: bold; color:#32CD32">\n</span><span style="color:#32CD32">&quot;</span>);
+   root1 <span style="color: #333333">=</span> ( <span style="color: #333333">-</span>b <span style="color: #333333">+</span> sqrt(d)) <span style="color: #333333">/</span> (<span style="color: purple; font-weight: bold">2</span><span style="color: #333333">*</span> a);
+   root2 <span style="color: #333333">=</span> ( <span style="color: #333333">-</span>b <span style="color: #333333">-</span> sqrt(d)) <span style="color: #333333">/</span> (<span style="color: purple; font-weight: bold">2</span><span style="color: #333333">*</span> a);
+   printf(<span style="color:#32CD32">&quot;Roots of quadratic equation are: %.3f , %.3f&quot;</span>,root1,root2); 
+  }
+  <span style="color: #008800; font-weight: bold">return</span> <span style="color: purple; font-weight: bold">0</span>;
+}
+</div>
+<span style="color: #996700; font-weight: bold">Output:</span>
+<div style="width:auto;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff;text-align:center;">
+<img src="quad.jpg" width="100%">
+</div>
+</pre></div>

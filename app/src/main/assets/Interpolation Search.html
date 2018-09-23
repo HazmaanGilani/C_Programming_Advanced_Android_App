@@ -1,0 +1,54 @@
+<html>
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+<div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:hidden">
+<span style="color: #226666">/*C Program forInterpolationSearch*/</span>
+</div>
+<pre style="margin: 0; line-height: 200%">
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:scroll">
+<span style="color: brown">#include&lt;stdio.h&gt;</span>
+<span style="color: brown">#include&lt;stdlib.h&gt;</span>
+#define MAX 200
+ <span style="color: #0067BB; font-weight: bold"><span style="color: #0067BB; font-weight: bold">int</span></span>  interpolation_search(<span style="color: #0067BB; font-weight: bold">int</span> a[], <span style="color: #0067BB; font-weight: bold">int</span> bottom, <span style="color: #0067BB; font-weight: bold">int</span> top, <span style="color: #0067BB; font-weight: bold">int</span> item) 
+{
+<span style="color: #0067BB; font-weight: bold">int</span> mid;
+ <span style="color: green; font-weight: bold">while</span> (bottom &lt;= top) 
+{
+ mid = bottom + (top - bottom)* ((item - a[bottom]) / (a[top] - a[bottom]));
+ <span style="color: green; font-weight: bold">if</span> (item == a[mid])
+return mid + 1;
+ <span style="color: green; font-weight: bold">if</span> (item &lt; a[mid])
+top = mid - 1;
+ <span style="color: green; font-weight: bold">else</span>
+bottom = mid + 1;
+ }
+return -1;
+}
+  <span style="color: #0067BB; font-weight: bold"><span style="color: #0067BB; font-weight: bold">int</span></span>  <span style="color: red; font-weight: bold">main()</span> {
+<span style="color: #0067BB; font-weight: bold">int</span> arr[MAX];
+<span style="color: #0067BB; font-weight: bold">int</span> i, num;
+ <span style="color: #0067BB; font-weight: bold">int</span> item, pos;
+ <span style="color: #ff1493; font-weight: bold">printf</span>("\nEnter total elements: ", MAX);
+ <span style="color: #ff1493; font-weight: bold">scanf</span>("%d", &amp;num);
+ <span style="color: #ff1493; font-weight: bold">printf</span>("Enter %d Elements : ", num);
+<span style="color: green; font-weight: bold">for</span> (i = 0; i &lt; num; i++)
+ <span style="color: #ff1493; font-weight: bold">scanf</span>("%d", &amp;arr[i]); 
+ <span style="color: #ff1493; font-weight: bold">printf</span>("\n ELEMENTS ARE\n: ");
+<span style="color: green; font-weight: bold">for</span> (i = 0; i &lt; num; i++)
+ <span style="color: #ff1493; font-weight: bold">printf</span>("%d &nbsp;&nbsp;", arr[i]);
+ <span style="color: #ff1493; font-weight: bold">printf</span>("\n Search <span style="color: green; font-weight: bold">for</span> : ");
+ <span style="color: #ff1493; font-weight: bold">scanf</span>("%d", &amp;item);
+pos =  interpolation_search(&amp;arr[0], 0, num, item);
+ <span style="color: green; font-weight: bold">if</span> (pos == -1)
+ <span style="color: #ff1493; font-weight: bold">printf</span>("\n Element %d not found \n", item);
+ <span style="color: green; font-weight: bold">else</span>
+ <span style="color: #ff1493; font-weight: bold">printf</span>("\n Element %d found at position %d \n", item, pos); 
+return 0;
+}
+</div>
+<span style="color: #996700; font-weight: bold">Output:</span>
+<div style="width:auto;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff;text-align:center;">
+<img src="intse.jpg" width="100%">
+</div>
+	</pre>
+	</div>
+</html> 	

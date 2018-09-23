@@ -1,0 +1,57 @@
+<html>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Bit Field</span>
+
+A Bit field is a member of a structure whose bit length is specified.
+It is used to store multiple, logical, neighboring bits, where each of the sets of bits, and single bits can be addressed.
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Bit Field Declaration</span><br>
+<pre style="line-height:80%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+struct<br>
+{<br>
+  type [member_name] : width ;<br>
+};
+</pre><br>
+<br>
+Below is the description of variable elements of a bit field:<br>
+<span style="font-size:22px;color:violet;">ElementsDescription:</span><br>
+<span style="font-size:22px;color:#226666;">type:</span>An integer type that determines how the bit-field's value is interpreted. The type may be int, signed int, unsigned int.<br>
+<span style="font-size:22px;color:#226666;">member_name:</span> The name of the bit-field.<br>
+<span style="font-size:22px;color:#226666;">width:</span> The number of bits in the bit-field. The width must be less than or equal to the bit width of the specified type.<br>
+
+ A bit field can hold more than a single bit for example if you need a variable to store a value from 0 to 7 only then you can define a bit field with a width of 3 bits as follows:<br>
+<pre style="line-height:80%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+<br>
+struct<br>
+{<br>
+  unsigned int roll no : 3;<br>
+} Roll no;<br>
+</pre>
+
+</body>
+</div>
+</html>

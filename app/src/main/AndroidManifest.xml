@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cprograms.mproject.cprograms">
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ProgramList"
+            android:label="@string/title_activity_program_list">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cprograms.mproject.cprograms.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Detail"
+            android:label="@string/title_activity_detail"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
+            android:name=".Quiz"
+            android:label="@string/title_activity_quiz"></activity>
+        <activity
+            android:name=".FAQ"
+            android:label="@string/title_activity_faq"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cprograms.mproject.cprograms.MainActivity" />
+        </activity>
+        <activity android:name=".Score"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name=".algo"></activity>
+    </application>
+
+</manifest>

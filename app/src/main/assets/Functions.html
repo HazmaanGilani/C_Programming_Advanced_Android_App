@@ -1,0 +1,195 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px">
+<span style="font-size:22px;color:violet;">Introduction</span><br><br>
+In C a large program can be divided into a number of smaller, complete
+and independent subprograms. These subprograms possess selfcontained
+components, each of which has some unique, identifiable
+purpose. This task is called modularization and each sub program is called
+a module or a function.<br> In other words a function can be defined as a self-contained program segment that carries out some specific, well-defined task. Functions are invoked by the main program or
+other subprograms.<br>
+The function takes a data from main () function and returns a value. To
+invoke a function call is made in the main () function. The function which
+sends the data to the function is called as the Calling Function and the
+function which is called by the calling function is called as the Called
+Function.<br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+There are two kinds of functions<br>
+1. Library or built-in functions<br>
+2. User-defigned functions<br>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+1. <span style="font-size:22px;color:violet;">Library or built-in functions :</span> These finctions are used to perform standard operations eg: squareroot of a number sqrt(x), absolute value fabs(x), scanf( ), printf( ), and so on. These functions are available along with the compiler and are used along with the required header files such as math.h, stdio. h, string.h and so on at the beginning of the program.<br><br>
+2. <span style="font-size:22px;color:violet;">User defined functions :</span>These functions are self-contained blocks of statements which are written by the user to compute a value or to perform a task. They can be called by the main() function repeatedly as per the requirement.<br><br>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+
+<span style="font-size:22px;color:violet;">USES OF FUNCTIONS :</span><br><br>
+1. Functions are very much useful when a block of statements has to be written/executed again and again.<br>
+2. Functions are useful when the program size is too large or complex.Functions are called to perform each task sequentially from the main program. It is like a top-down modular programming technique to solve a problem<br>
+3. Functions are also used to reduce the difficulties during debugging a program<br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">USER DEFINED FUNCTIONS :</span> In C language, functions are declared to compute and return the value of specific data type to the calling program. Functions can also written to perform a task. It may return many values indirectly to the calling program and these are referred to as void functions.<br><br>
+
+The general form of a function declaration is<br>
+<pre style="line-height:80%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+type name (type arg1, type arg2 ... type argn)<br>
+{<br>
+<local declaration ><br>
+--------------------<br>
+< statement block><br>
+--------------------<br>
+--------------------<br>
+return (variable or expression)<br>
+}
+</pre>
+<br><br>
+Where type is the data type of the value return by the function and arguments expected. arg1, arg2…. argn are the arguments which are variables which will receive values form the calling program, name is the name of function by which the function is called by the calling program. There is a local declaration of variables. These variables are referred as local variables, are used only inside the function. The statement block consists of a set of statements and built-in functions which are executed when the function is called. The result is returned to the calling program through a return statement that normally appears at the end of a function block. This function block starts and ends with braces { }.<br></div><br>
+
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Function main() :</span><br><br>
+1. main() is the starting function for any C program. Execution commences from the first statement in the main () function<br>
+2. It returns int value to the environment that called the program. Usually zero is returned for normal termination of the main(). Non zero is returned to convey abnormal termination<br>
+3. It uses no parameter. But it may use two specific parameters<br>
+4. Recursive call is allowed for main () function also.<br>
+5. Only the function body varies from programmer to programmer main (). Function heard follows the common syntax by either having no parameter or only two standard parameters.<br>
+6. The program execution ends when the closing brace of the in main is reached.<br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">FUNCTION PROTOTYPE :</span> When a C program is compiled, the compiler does not check for data type mismatch of actual arguments in the function call and the formal arguments in the function declaration. To enable the compiler to check the same, a function prototype declaration is used in the main program.<br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">ACTUAL AND FORMAL ARGUMENTS:</span> Passing of values between the main program and the function takes place through arguments. The arguments listed in the function calling statements are referred to as actual arguments. These actual values are passed to a function to compute a value or to perform a task. The arguments used tin the function declaration are referred as formal arguments. They are simply formal variables that accept or receive the values supplied by the calling function.<br><br>
+<pre style="line-height:80%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+<br>
+Note: The number of actual and formal arguments and their data types should match.<br></pre><br>
+The function call sends two integer values 10 and 5 to the function<br>
+int mul(int x, int y) which are assigned to x and y respectively.<br>
+The function computers the product x and y assigns the result to the local variable p, and then returns the value 25 to the main() where it is assigned to y again..<br></div><br>
+
+
+}<br><br>
+
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Rules to call a function :</span> The following rules are used to call a function is a program:<br><br>
+1. A function has a statement block which is called by the main( ) or any other function.<br>
+2. When the data type in a function declaration is omitted the function will return a value of the type integer.
+3. The data type of the formal argument may be declared in the next line which follows the function declaration statement.<br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Formal Parameter List :</span> The parameter list declares the variables that will receive the data sent by the calling program. They serve as input data to the function to carry out the specified task. Since they represent actual input values, they are often referred to as formal parameters.<br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">FUNCTION CALLS:</span> A function can be called by simply using the function name followed by a list of actual parameters (or arguments)<br><br>
+<pre style="line-height:80%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+main()
+
+{ 
+int y ;
+
+y = add (10,5);  / * function call * /
+
+printf (&quot;%d \n&quot;,y) ; 
+
+}
+ int add(int x,int y)
+ {
+
+int p ;
+
+p= x + y ;
+
+return(p);
+ }
+ </pre>
+ <br><br>
+When the compiler encounters a function call the control is transferred to the function add(), this function is then executed line by line as described and the value of p is returned when the return statement is encountered. This value is assigned to y.<br>
+Parameters can also be used to send values to the calling programs. Parameter list contains declaration of variables separated by commas and surrounded by parenthesis.
+
+
+Example Programs:<br><br>
+<pre style="line-height:80%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+#include &lt;stdio.h><br>
+void printMessage (void)<br>
+{<br>
+printf ("C programmingis fun"\n");<br>
+}<br>
+int main (void)<br>
+{<br>
+printMessage ();<br>
+return 0;<br>
+}<br>
+Here the function called print Message () is used to print the message.<br>
+</pre><br>
+<pre style="line-height:80%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+Example2:<br>
+#include &lt;stdio.h><br>
+void div(int); //function declaration<br>
+main(){<br>
+	int n;<br><br>
+	printf(&quot;enter a number&quot;);<br>
+	scanf(&quot;%d&quot;,&n);<br>
+	void div(n);
+	}<br>
+void div (int n)  //function definition<br>
+{<br>
+if ((n % 4) == 0)<br>
+printf (&quot;%d is divisible by 4&quot;, n);<br>
+else<br>
+printf (&quot;%d is not divisible by 4&quot;, n);<br>
+return;
+}
+</pre>
+<br><br>
+</div>
+</body>

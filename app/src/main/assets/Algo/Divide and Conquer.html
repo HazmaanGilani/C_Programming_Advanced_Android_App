@@ -1,0 +1,22 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Divide and Conquer</span><br><br>
+Divide and conquer is an Algorithm design technique in which the the problem  is divided into two or more smaller  problems, then these smaller problems are solved  recursively, and then their solutions are assembled to form a solution of the original problem . The recursion stops when an problem is reached which is too small to divide.<br>
+Divide and conquer algorithm consists of three parts:<br><br>
+Divide : Divide the problem into a number of sub problems. The sub problems are solved recursively.<br>
+Conquer : The solution to the original problem is then formed from the solutions to the sub problems.<br>
+Combine : The Solutions of sub-problems are combined to form a solution of original problem.<br><br>
+
+<span style="font-size:22px;color:#226666;">Steps required to develop divide-and-conquer algorithms.</span><br><br>
+<li> A problems instance is divided into several smaller instances of the same problem, ideally about the same size
+<li> The smaller instances are solved, typically recursively
+<li> If necessary the solutions obtained are combined to get the solution of the original problem
+Given a function to compute on 'n' inputs the divide-and-comquer strategy suggests splitting the inputs in to'k' distinct susbsets, 1&lt;k &lt;n, yielding 'k' subproblems. The subproblems must be solved, and then a method must be found to combine subsolutions into a solution of the whole. If the subproblems are still relatively large, then the divide-and conquer strategy can possibly be reapplied<br><br>
+</div><br>
+
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:#226666;">Example:</span><br><br>
+Merge Sort<br><br>
+1. Divide Step: If given array A has zero or one element, return S; it is already sorted. Otherwise, divide A into two arrays, A1 and A2, each containing about half of the elements of A.<br><br>
+2. Recursion Step: Recursively sort array A1 and A2. <br><br>
+3. Conquer Step: Combine the elements back in A by merging the sorted arrays A1 and A2 into a sorted sequence

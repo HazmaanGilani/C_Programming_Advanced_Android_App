@@ -1,0 +1,73 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+structure is a collection of different data types grouped together.<br/><br/>
+
+Structures are variables that have several parts; each part of the object can have different types.<br/> 
+Each part of the structure is called a member of the structure.<br/></div><br/>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;"> Declaration</span><br/><br/>
+
+Consider basic data of student :<br/>roll_no, class, name, age, address.<br/><br/>
+A structure data type called student can hold all this information:<br/>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+struct student {<br/>
+	int roll_no<br/>
+	char class<br/>
+	char name[25];<br/>
+	int age;<br/>
+	char address[50];<br/>
+};</pre><br/><br/>
+
+before the final semicolon, At the end of the structure's definition, we can specify one or more structure variables.<br/><br/>  
+There is also another way of declaring variables given below,<br/>
+struct student s1;<br/></div><br/>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;"> Initialization</span><br/><br/>
+Structure members can be initialized at declaration. This is same as the initialization of arrays; 
+the values are listed inside braces. The structure declaration is preceded by the keyword static.<br/><br/>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+static struct student Tyrion ={1234,''Programming'',''Tyrion'',20,''vegas''};</pre><br/></div><br/>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+
+<span style="font-size:22px;color:violet;"> Accessing structure data</span><br/><br/>
+To access a given member the dot notation is use. The ''dot'' is called the member access operator<br/><br/>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+struct student s1;<br/>
+s1.name = ''Tyrion'';<br/>
+s1.roll_no = 1234</pre><br/></div><br/>
+
+</div>
+</body>

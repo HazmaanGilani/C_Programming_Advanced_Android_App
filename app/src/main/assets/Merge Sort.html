@@ -1,0 +1,100 @@
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+<div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:hidden">
+<span style="color: #226666">/*C Program for MergeSort*/</span>
+</div>
+<pre style="margin: 0; line-height: 125%"> 
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:scroll">
+<span style="color: brown">#include&lt;stdio.h&gt;</span>
+<span style="color: brown">#include&lt;conio.h&gt;</span>
+<span style="color: brown">#define MAX 20</span>
+<span style="color: #0067BB; font-weight: bold">void</span> mergeSort(<span style="color: #0067BB; font-weight: bold">int</span> arr[],<span style="color: #0067BB; font-weight: bold">int</span> low,<span style="color: #0067BB; font-weight: bold">int</span> mid,<span style="color: #0067BB; font-weight: bold">int</span> high); 
+<span style="color: #0067BB; font-weight: bold">void</span> partition(<span style="color: #0067BB; font-weight: bold">int</span> arr[],<span style="color: #0067BB; font-weight: bold">int</span> low,<span style="color: #0067BB; font-weight: bold">int</span> high); 
+<span style="color: #0067BB; font-weight: bold">int</span> <span style="color: red; font-weight: bold">main()</span>
+{
+<span style="color: #0067BB; font-weight: bold"><span style="color: #0067BB; font-weight: bold">int</span></span> merge[MAX],i,n; 
+<span style="color: #ff1493; font-weight: bold">printf</span>("Enter the total number of elements: ");
+<span style="color: #ff1493; font-weight: bold">scanf</span>("%d",&amp;n);
+ <span style="color: #ff1493; font-weight: bold">printf</span>("Enter the elements : "); 
+  <span style="color: green; font-weight: bold">for</span>(i=0;i&lt;n;i++)
+{
+ <span style="color: #ff1493; font-weight: bold">scanf</span>("%d",&amp;merge[i]);
+ 
+ }
+ partition(merge,0,n-1); 
+  <span style="color: #ff1493; font-weight: bold">printf</span>("After merge sorting elements are: ");
+<span style="color: green; font-weight: bold">for</span>(i=0;i&lt;n;i++)
+ {
+<span style="color: #ff1493; font-weight: bold">printf</span>("%d ",merge[i]);
+}
+<span style="color: brown; font-weight: bold"><span style="color: brown; font-weight: bold">return 0;</span></span>
+  }
+ 
+ <span style="color: #0067BB; font-weight: bold">void</span> partition(<span style="color: #0067BB; font-weight: bold">int</span> arr[],<span style="color: #0067BB; font-weight: bold">int</span> low,<span style="color: #0067BB; font-weight: bold">int</span> high)
+ { 
+ 
+ <span style="color: #0067BB; font-weight: bold">int</span> mid; 
+<span style="color: green; font-weight: bold">if</span>(low&lt;high)
+ {
+  mid=(low+high)/2; 
+  partition(arr,low,mid); 
+  partition(arr,mid+1,high); 
+  mergeSort(arr,low,mid,high);
+
+  }
+
+}
+ <span style="color: #0067BB; font-weight: bold">void</span> mergeSort(<span style="color: #0067BB; font-weight: bold">int</span> arr[],<span style="color: #0067BB; font-weight: bold">int</span> low,<span style="color: #0067BB; font-weight: bold">int</span> mid,<span style="color: #0067BB; font-weight: bold">int</span> high)
+ { 
+<span style="color: #0067BB; font-weight: bold">int</span> i,m,k,l,temp[MAX]; 
+l=low; 
+i=low; 
+m=mid+1; 
+while((l&lt;=mid)&amp;&amp;(m&lt;=high))
+{ 
+<span style="color: green; font-weight: bold">if</span>(arr[l]&lt;=arr[m])
+{
+  temp[i]=arr[l]; 
+l++;
+  
+ }
+ <span style="color: green; font-weight: bold">else</span>
+ {
+temp[i]=arr[m]; 
+m++; 
+ }  
+  i++;
+ }
+  <span style="color: green; font-weight: bold">if</span>(l&gt;mid)
+{ 
+<span style="color: green; font-weight: bold">for</span>(k=m;k&lt;=high;k++)
+{
+ temp[i]=arr[k]; 
+ i++;
+
+ }
+}
+ <span style="color: green; font-weight: bold">else</span>
+{
+<span style="color: green; font-weight: bold">for</span>(k=l;k&lt;=mid;k++)
+ {
+ temp[i]=arr[k]; 
+  i++;
+ 
+ }
+
+}
+<span style="color: green; font-weight: bold">for</span>(k=low;k&lt;=high;k++)
+{
+arr[k]=temp[k]; 
+ 
+}
+  <span style="color: brown; font-weight: bold">return 0;</span>
+
+}
+</div>
+<span style="color: #996700; font-weight: bold">Output:</span>
+<div style="width:auto;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff;text-align:center;">
+<img src="meso.jpg" width="100%">
+</div>
+</pre>
+</div>

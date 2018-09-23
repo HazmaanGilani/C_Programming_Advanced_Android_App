@@ -1,0 +1,502 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Arrays</span><br><br>
+
+The fundamental data types, namely char, int, float, double are used to store only one value at any given time.Hence these fundamental data types can handle limited amounts of data.
+In some cases we need to handle large volume of data in terms of reading, processing
+and printing.
+To process such large amounts of data, we need a powerful data type that would facilitate efficient storing, accessing and manipulation of data items.
+"C" supports a derived data type known as "array" that can be used for such applications.<br>
+Arrays:<br></li>
+<li> An array is a fixed size sequenced collection of elements of the same data type.<br></li>
+<li> It is simply grouping of like type data such as list of numbers, list of names etc.<br></li>
+Some examples where arrays can be used are<br><br>
+1) List of temperatures recorded every hour in a day, or a month, or a year.<br>
+2) List of employees in an organization.<br>
+3) List of products and their cost sold by a store.e.t.c.<br>
+Thus An array is collection of same data type elements in a single entity. Or An array is collection of homogeneous elements in a single variable.<br>
+<li> It allocates sequential memory locations.<br></li>
+<li> Individual values are called as elements.</div></li>
+<br><br>
+
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+Types of Arrays: We can use arrays to represent not only simple lists of values but also tables of data in two or three or more dimensions.<br>
+<li> One - dimensional arrays<br></li>
+<li> Two - dimensional arrays<br></li>
+<li> Multi - dimensional arrays<br><br></li>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">ONE - DIMENSIONAL ARRAY:</span> A list of items can be given one variable name using only one subscript and such a variable is called a single - subscripted variable or a one - dimensional array.</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Declaration of One-Dimensional Arrays :</span><br><br>
+<li> Like any other variables, arrays must be declared before they are used.</li>
+The general form of array declaration is<br>
+Syntax:<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+datatype array_name [sizeofarray];
+</pre><br>
+<li> The datatype specifies the type of element that will be contained in the array, such as int, float, or char.<br></li>
+<li> The size indicates the maximum number of elements that can be stored inside the array.<br></li>
+<li> The size of array should be a constant value.<br></li>
+Examples:<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+float height[50];
+</pre><br>
+<li> Declares the height to be an array containing 50 real elements. Any subscripts 0 to 49 are valid.<br><br></li>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+char name[10];
+</pre><br>
+Declares the name as a character array (string) variable that can hold a maximum of 10 characters.<br>
+</div><br><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Initialization of One - Dimensional Arrays:</span><br>
+<li> After an array is declared, its elements must be initialized. Otherwise they will contain "garbage".<br></li>
+<li> An array can be initialized at either of the following stages.<br></li>
+(i) At compile time<br>
+(ii) At run time.<br><br>
+
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+1) <span style="font-size:22px;color:violet;">Compile Time Initialization:</span> We can initialize the elements of arrays in the same way as the ordinary variables when they are declared. The general form of initialization of array is datatype array_name[size] = { list of values }; The values in the list are separated by commas.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+Example: int number[3] = {0,0,0};
+</pre><br>
+<li> i.e., we will declare the variable number as an array of size 3 and will assign zero to each element.<br></li>
+<li> If the number of values in the list is less than the number of elements, then only that many elements will be initialized.<br></li>
+
+<li> The remaining elements will be set to zero automatically.<br></li>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+<br>Ex: float total[5] = { 0.0, 15.75, -10};
+</pre><br>
+<li> The size may be omitted.<br></li>
+<li> In such cases, the compiler allocates enough space for all initialized elements.<br></li>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+<br>Ex: int counter [ ] = {1,1,1,1};
+</pre><br>
+<li> This will declare the counter array to contain four elements with initial values 1.<br></li>
+<li> Character arrays may be initialized in a similar manner.<br></li>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+char name[ ] = { "J", "o", "h", "n", "\0"};
+</pre>
+<li> This declares the name to be an array of five characters initialized with the string "John" ending with a null character.<br></li>
+<li> Alternative declaration is char name[ ] = "John";<br></li>
+<li> Compile time initialization may be partial. i.e., the number of initializers may be less than the declared size. In such cases the remaining elements are initialized to zero, if the array type is numeric.And NULL if the type is char.
+<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+ Ex: int number[5] = {10,20};
+ </pre><br>
+<li> Will initialize the first two elements to 10 & 20 respectively and the remaining elements to zero.
+Similarly char city[5] = {"B"}; will initialize the first element to "B" and the remaining four to NULL.<br></li>
+<li> If we have more initializers than the declared size, the compiler will produce an error.</li>
+int number[3] = {10,20,30,40}; will not work. It is illegal in C.
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+
+(2) <span style="font-size:22px;color:violet;">Run Time Initialization:</span><br><br>
+<li> An array can be explicitly initialized at run time.<br></li>
+<li> This approach is usually applied for initializing long arrays.<br></li>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+<br>Ex:
+for(i=0; i<100%; i++) <br>
+{ <br>
+
+if (i<50)<br>
+
+sum [i] = 0.0;<br>
+ else <br>
+ sum [i]= 1.0; <br>
+ } <br>
+ -----------</pre><br><br>
+
+<li> Here the first 50 elements of the array "sum" are initialized to zero.<br></li>
+<li> While remaining 50 elements are initialized to 1.0 at run time.<br>
+<li> We can also use a read function such as "scanf" to initialize an array.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+<br>Ex: int x[3]; scanf(" %d %d %d ", &x[0], &x[1], &x[2]);
+</pre><br>
+<li> This will initialize array elements with the values entered through the key board.<br>
+<li> Character arrays are called strings.<br>
+<li> There is a slight difference between an integer array and a character array.<br>
+<li> In character array NULL ("\0") character is automatically added at the end.<br>
+<li> In other types of arrays no character is placed at the end.<br>
+<li> Hence by using NULL character compiler detects the end of the character array.<br><br>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:24px;color:violet;font-family:verdana;text-decoration:underline dotted">Important</span><br><br>
+<span style="font-size:22px;color:violet;">Array Indexing</span>
+Array index start at zero , and go to one less than the size of the array.<br>e.g
+Consider an Array<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;"> a[5]={1,2,3,4,5};</pre><br>
+The index position and element position of this array is as:
+<img src="arsa.png" width="90%"><br><br>
+This is because in C the name of an array is a pointer, which is a reference to a memory location. Therefore, an expression *(arr + n) or arr[n] locates an element n-locations away from the starting location because the index is used as an offset.
+                </div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+
+<span style="font-size:22px;color:violet;">TWO DIMENSIONAL ARRAYS:</span> There could be situations where a table of values will have to be stored. Consider a student table with marks in 3 subjects.<br><br>
+<img src="arraytab.jpg" width="100%"><br><br>
+<li> We can think this table as a matrix consisting of 5 rows & 3 columns.<br>
+<li> Each row represents marks of student # 1 in all (different) subjects.<br>
+<li> Each column represents the subject wise marks of all students.<br>
+<li> In mathematics we represent a particular value in a matrix by using two subscripts such as Vij.<br>
+<li> Here V denotes the entire matrix Vij refers to the value in " i "th row and " j "th column.<br>
+EXAMPLE: In the above table V23 refers to the value "80".<br>
+<li> C allows us to define such tables of items by using two-dimensional arrays.<br>
+Definition: A list of items can be given one variable name using two subscripts and such a variable is called a two - subscripted variable or a two - dimensional array.<br><br>
+Two - Dimensional arrays can be declared as.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+ datatype  name[row size] [column size] ;</pre><br>
+<li> The above table can be defined in "C" as<br>
+int V[5][3]; Representation of two Dimensional array in memory.<br>
+<img src="array2d.jpg"><br>
+<img src="array2d2.jpg"><br><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+
+<span style="font-size:22px;color:violet;">Initializing Two- Dimensional Arrays:</span><br>
+<li> Like the one-dimensional arrays, two-dimensional arrays may be initialized by
+following their declaration with a list of initial values enclosed in braces.
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+int table[2] [3] = {0,0,0,1,1,1};
+</pre><br>
+<li> This initializes the elements of first row to zero and the second row to one.<br>
+<li> This initialization is done row by row.<br>
+<li> The above statement can be equivalently written as
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+int table[2][3] = {0,0,0},{1,1,1};
+</pre><br>
+we can also initialize a two - dimensional array in the form of a matrix as shown.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+int table[2][3] = {<br>
+{0,0,0},<br>
+{1,1,1}<br>
+};
+</pre>
+<br><br>
+Commas are required after each brace that closes of a row, except in case of last row.
+<li> If the values are missing in an initializer, they are automatically set to zero.<br>
+<br>Ex: <pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+int table [2] [3] = {<br>
+{1,1},   1 1 0<br>
+{2}      2 0 0<br>
+};
+</pre>
+<br>
+
+This will initialize the first two elements of the first row to one,<br>
+<li> The first element of the second row to two and all other elements to zero.<br>
+<li> When all the elements are to be initialized to zero, the following short-cut method may be used.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+int m[3][5] = { {0}, {0}, {0}};
+</pre><br>
+<li> The first element of each row is explicitly initialized to zero while the other elements are automatically initialized to zero.<br>
+<li> The following statement will also achieve the same result<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+int m[3][5] = { 0, 0 };
+</pre><br><br>
+</div><br><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">MULTI  DIMENSIONAL ARRAY:</span> list of items can be given one variable name using more than two subscripts and such a variable is called Multi - dimensional array.</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+Three Dimensional Array: A list of items can be given one variable name using three subscripts and such a variable is called Three - dimensional array.</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Declaration of Three-Dimensional Arrays :</span> Syntax: <pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+                <datatype> <array_name>type name[size1][size2]...[sizeN];;</pre><br>
+<li> The datatype specifies the type of elements that will be contained in the array, such as
+int, float, or char.</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Initializing Three- Dimensional Arrays:</span><br>
+<li> Like the one-dimensional arrays, three-dimensional arrays may be initialized by
+following their declaration with a list of initial values enclosed in braces.<br><br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+int table[2][2][3] = {0,0,0,1,1,1,6,6,6,7,7,7};
+</pre><br>
+<li> This initializes the elements of first two dimensional(matrix) first row to zero"s and
+the second row to one"s and second matrix elements are first row to six"s and the
+second row to seven"s.<br><br>
+<li> This initialization is done row by row.<br>
+<li> The above statement can be equivalently written as<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+int table[2][3] = { {0,0,0} , {1,1,1} , {0,0,0} , {1,1,1}}
+</pre><br>
+we can also initialize a two - dimensional array in the form of a matrix as shown.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">int table[2][3] = {<br>
+{
+{0,0,0},
+{1,1,1}
+},
+{
+{6,6,6},
+{7,7,7}
+}
+} ;
+</pre>
+
+</div>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

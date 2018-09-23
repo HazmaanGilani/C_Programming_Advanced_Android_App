@@ -1,0 +1,138 @@
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+<div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:hidden">
+<span style="color: #226666;font-weight: bold">/*C Program to implement Circular Queue</span> </span>
+</div>
+<pre style="margin: 0; line-height: 125%"> 
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:scroll">
+<span style="color: brown">#include&lt;stdio.h&gt;</span>
+<span style="color: brown">#define SIZE 5</span>            
+<span style="color: #0067BB; font-weight: bold">int</span> Circularqueue[SIZE], front = -1, rear = -1; 
+
+Enque(<span style="color: #0067BB; font-weight: bold">int</span> data) { 
+<span style="color:green; font-weight: bold">if</span> (full())
+
+<span style="color:#ff1493; font-weight: bold">printf</span>("\n Overflow\n");
+
+<span style="color:green; font-weight: bold">else</span> 
+
+{
+
+<span style="color:green; font-weight: bold">if</span> (front == -1)
+
+front = 0;
+rear = (rear + 1) % SIZE;
+Circularqueue[rear] = data;
+
+}
+}
+
+<span style="color: #0067BB; font-weight: bold">int</span> Deque()
+
+{
+
+<span style="color: #0067BB; font-weight: bold">int</span> data;
+
+<span style="color:green; font-weight: bold">if</span> (empty()) 
+
+{
+
+<span style="color:#ff1493; font-weight: bold">printf</span>("\nUnderflow\n");
+
+<span style="color:brown; font-weight: bold">return</span> (-1);
+
+} 
+
+<span style="color:green; font-weight: bold">else</span> {
+data = Circularqueue[front];
+
+<span style="color:green; font-weight: bold">if</span> (front == rear) {
+   front = -1;
+   rear = -1;
+
+} 
+
+<span style="color:green; font-weight: bold">else</span>
+front = (front + 1) % SIZE;
+<span style="color:brown; font-weight: bold">return</span> (data);
+
+ }
+
+}
+
+<span style="color: #0067BB; font-weight: bold">int</span> full() { /*  Checks if Circular Queue is Full */
+
+<span style="color:green; font-weight: bold">if</span> ((front == rear + 1) || (front == 0 && rear == SIZE - 1))
+<span style="color:brown; font-weight: bold">return</span> 1;
+
+<span style="color:brown; font-weight: bold">return</span> 0;
+}
+
+<span style="color: #0067BB; font-weight: bold">int</span> empty() { /* Function to Check Circular Queue Empty */
+<span style="color:green; font-weight: bold">if</span> (front == -1)
+<span style="color:brown; font-weight: bold">return</span> 1;
+<span style="color:brown; font-weight: bold">return</span> 0;
+}
+
+display() { /* Function to print Circular Queue */
+
+<span style="color: #0067BB; font-weight: bold">int</span> i;
+<span style="color:green; font-weight: bold">if</span> (empty())
+<span style="color:#ff1493; font-weight: bold">printf</span>(" \n Empty Queue\n");
+<span style="color:green; font-weight: bold">else</span> {
+<span style="color:#ff1493; font-weight: bold">printf</span>("Front[%d]->", front);
+<span style="color:green; font-weight: bold">for</span> (i = front; i != rear; i = (i + 1) % SIZE)
+<span style="color:#ff1493; font-weight: bold">printf</span>("%d ", Circularqueue[i]);
+<span style="color:#ff1493; font-weight: bold">printf</span>("%d ", Circularqueue[i]);
+<span style="color:#ff1493; font-weight: bold">printf</span>("<-[%d]Rear", rear);
+}
+}
+
+main() 
+{ 
+ <span style="color: #0067BB; font-weight: bold">int</span> option, data;
+
+ do {
+<span style="color:#ff1493; font-weight: bold">printf</span>("\n Press 1-Insert, 2-Delete,3-Display,4-Exit\n");
+
+<span style="color:#ff1493; font-weight: bold">scanf</span>("%d", &option);
+  switch (option) { 
+  <span style="color:#006699; font-weight: bold">case</span> 1:
+  <span style="color:#ff1493; font-weight: bold">printf</span>("\nEnter the element to be Inserted:");
+   <span style="color:#ff1493; font-weight: bold">scanf</span>("%d", &data);
+   Enque(data);
+   break;
+
+  <span style="color:#006699; font-weight: bold">case</span> 2:
+   data = Deque();
+   <span style="color:green; font-weight: bold">if</span> (data != -1)
+    <span style="color:#ff1493; font-weight: bold">printf</span>("\nDeleted Element is %d \n", data);
+   break;
+
+  <span style="color:#006699; font-weight: bold">case</span> 3:
+   <span style="color:#ff1493; font-weight: bold">printf</span>("\nCircular Queue is:\n\n");
+   display();
+   break;
+
+  <span style="color:#006699; font-weight: bold">case</span> 4:
+   exit(0);
+   break;
+
+  default:
+   <span style="color:#ff1493; font-weight: bold">printf</span>("\nInvalid Option  \n\n");
+   break;
+
+  }
+
+
+} 
+<span style="color:green; font-weight: bold">while</span> (option != 4);
+}
+</div>
+
+
+<span style="color: #996700; font-weight: bold">Output:</span>
+<div style="width:auto;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff;text-align:center;">
+<img src="cque.jpg" width="100%">
+</div>
+</pre>
+</div>

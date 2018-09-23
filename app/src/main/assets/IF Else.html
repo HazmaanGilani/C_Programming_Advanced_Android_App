@@ -1,0 +1,114 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;"> If&minus;Else :
+</span>
+<body style="font-size:20px ">
+The If &minus; else statement contains a condition. It is logically evaluated. If it
+evaluates to TRUE condition, then statements under if part is executed. If
+the condition evaluates to FALSE state then statements under else part is
+executed. Else clause is optional. The statement under if or else part can
+be single or multiple statements. If multiple statements are used, they
+must be embraced with the braces. The syntax of if&minus;else statement is
+given here.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+if (expression)<br>
+Statement;<br>
+else<br>
+statement;
+</pre>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Nested IF:
+</span>
+
+Inside one if statement, if or if&minus;else can be used. Such statements are
+called nested if, the structure is given below.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+if( a )<br>
+{<br>
+if ( b )<br>
+{<br>
+Statement1;<br>
+- - -<br>
+Statement n;<br>
+}<br>
+if ( c )<br>
+{<br>
+Statement1;<br>
+- - -<br>
+Statement n;<br>
+}<br>
+else<br>
+{<br>
+Statement1;<br>
+- - -<br>
+Statement n;<br>
+}<br>
+}<br>
+else<br>
+{<br>
+Statement1;<br>
+- - -<br>
+Statement n;<br>
+}<br><br>
+</pre>
+The final else is associated with if (a) and not associated with if c,
+because it is not in the same block.
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">The If&minus;Else Ladder
+</span>
+A common programming construction is the if &minus; else &minus; if staircase because of
+its appearance. The general form is if ( expression )<br>
+Statement:<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+else<br>
+if ( expression )<br><br>
+Statement:<br>
+else<br>
+if ( expression )<br>
+Statement:<br>
+. . .<br>
+else<br><br>
+Statement:</pre><br><br>
+The condition are evaluated from top, towards down. As soon as a true
+condition is found, the statement associated with it is executed and the
+rest of the ladder is bypassed. If none of the conditions are true, the final
+else is executed. If final else is not present, no action taken place if all
+other conditions are false.
+
+</div>
+</body>

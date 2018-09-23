@@ -1,0 +1,286 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Operator:</span> An operator is a symbol that tells the Computer to perform certain mathematical or logical manipulations.<br><br>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Expression:</span> An expression is a sequence or combination of operands and operators that reduces to single value <br>
+Eg: 10+20 is an expression whose value is 30<br>
+C operators can be classified into a no. of categories.<br><br>
+1. Arithmetic<br>
+2. Relational<br>
+3. Logical<br>
+4. Assignment<br>
+5. Increment and Decrement<br>
+6. Conditional<br>
+7. Bitwise<br>
+8. Special<br>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Arithmetic Operators:</span> C provides all the basic arithmetic operators<br>
+<pre style="line-height:120%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">Eg: a + b, a - b, a * b,<br><br>-a * b, a / b, a % b</pre><br>
+Here a and b are variables and are known as operands and +,-,*,/ and % are the operators.<br> 
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+Note:C does not have an operator for exponentiation.</pre><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Operator Arithmetic:</span></div><br>
+
+
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:#226666;">Integer Arithmetic:</span> When the operands in an expression are integers then the expression is an integer expression and the operation is called integer arithmetic. This always yields an integer value. <br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+For Eg. a = 10 and b = 5 then<br>
+a+b=15<br>
+a-b=5<br>
+a*b=50<br>
+a\b=2<br>
+a%b=0(% is modulo operator returns remainder of expression)</pre><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:#226666;">Real Arithmetic / Floating Pont Arithmetic: </span>Floating Point Arithmetic involves only real operands of decimal or exponential notation. If x, y & z are floats, <br>
+then 
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+x = 6.0/7.0 = 0.857143<br>
+y = -1.0/3.0 = 0.333333 <br>
+z = 3.0/2.0 = 1.500000<br>
+</pre>
+
+                <pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+ Note:(Modulo Operator) % cannot be used with real operands</pre><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+ <span style="font-size:22px;color:#226666;">Mixed mode Arithmetic:</span> When one of the operands is real and the other is integer the expression is a mixed mode arithmetic expression. <br>
+ <pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+ Eg: <br>
+ 15/10.0 = 1.500000 <br>
+ 15/10 = 1<br><br>
+</pre></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+ <span style="font-size:22px;color:violet;">Relational Operator:</span> These are the operators used to Compare arithmetic, logical and character expressions.the value of a relational express is either one or zero .it is 1 if one is the specified relation is true and zero if it is false <br><br>
+ eg: 10 < 20 is true<br>
+20<10 is false <br><br>
+The relational operators in C are 
+
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+Operator  Meaning 
+<         is less than 
+< =       is less than or equal to 
+>         is greater 
+> =       is greater than or equal to 
+= =       is equal to 
+! =       is not equal to
+</pre><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+ <span style="font-size:22px;color:violet;">Logical operator :</span> Logical Operators are used when we want to test more than one condition and make decisions. here the operands can be constants, variables and expressions Logical operators are &&, ||, !<br></div><br>
+
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Assignment Operator:</span> Used to assign the result of an expression to a variable. = is the assignment operator.<br><pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+E.g:<br>
+x=2;<br>
+x + = 1 ; == > x = x+1</pre><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+
+<span style="font-size:22px;color:violet;">Increment and Decrement Operators:</span> ++ and - - are the increment and decrement operators respectively<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+Eg : 
+++x   or   x ++   == >   x+=1    == > x=x+1 . <br>
+-- x  or   x- -   == >   x-=1    == > x=x-1<br>
+</pre>
+A Prefix operator first adds 1 to the operand and then the result is assigned to the variable on left. A Postfix operator first assigns the value to the variable on the left and the increments the operand.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+e.g
+
+a=5;         a=5;
+x=++a         x=a++
+returns:     returns:
+a=6,x=6      a=6,x=5
+</pre><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Conditional operator:</span> is used to check a condition and Select a Value depending on the Value of the condition.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+Variable = (condition)? Value 1 : Value 2: </pre><br>
+If the Value of the condition is true then Value 1 is e valued assigned to the varable, otherwise Value2. <br>
+ <pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">Eg: big = ( a > b ) ? a : b ; <br>
+ This expression is equal to <br>
+ if (a > b) <br>
+ big = a; <br>
+ else <br>
+ big = b;<br><br>
+</pre></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Bitwise operator : </span>are used to perform operations at binary level i. e. bitwise. these operators are used for testing the bits, or Shifting them right or left . These operators are<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+ Operator       Meaning 
+ &&             AND
+ ||             OR
+ ^              Exclusive  OR
+ <<             Left Shift 
+ >>             Right Shift 
+ ~              Complement
+ </pre><br></div><br>
+ <div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+ <span style="font-size:22px;color:violet;">Special Operators:</span></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+ <span style="font-size:22px;color:#226666;">sizeof operator :</span> is used to find the no of bytes occupied by a variable / data type in computer memory.<br>
+  eg : sizeof (float) returns 4<br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:#226666;">comma operator :</span> can be used to link the related expressions together. A comma- linked: list of expressions are evaluated left to right and the value of right-most exp is the value of combined expression.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+Eg : value = ( x = 10, y = 5, x = y)<br>
+First 10 is assigned to x<br>
+then 5 is assigned to y<br>
+finally x + y i .e. which 15 is assigned to value .</pre><br>
+</pre>
+</div>
+</body>

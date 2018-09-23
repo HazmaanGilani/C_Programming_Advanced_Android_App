@@ -1,0 +1,33 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Dynamic Programming</span><br><br>
+Dynamic programming is an algorithm design method that can be used when a solution to the problem is viewed as the result of sequence of decisions. Dynamic programming is a technique for solving problems with overlapping subproblems. These sub problems arise from a recurrence relating a solution to a given problem with solutions to its smaller sub problems only once and recording the results in a table from which the solution to the original problem is obtained.<br>
+features of dynamic programming
+<li> Optimal solutions to sub problems are retained so as to avoid recomputing their values.
+<li> Decision sequences containing subsequences that are sub optimal are not considered.
+<li> It definitely gives the optimal solution always.<br><br>
+
+<span style="font-size:22px;color:#226666;">Steps required to develop  Dynamic Programming algorithm:</span><br><br>
+<li> Characterize the structure of an optimal solution.
+<li> Recursively define the value of the optimal solution.
+<li> Compute the value of an optimal solution in the bottom-up fashion.
+<li> Construct an optimal solution from the computed information.
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:#226666;">Example:</span><br><br>
+Fibonacci numbers
+From the definition of fibonacci numbers<br>
+f(n) = 0 if n=0<br>
+f(1) = 1 if n=1<br>
+f(n) = f(n-1) + f(n-2) if n &gt;1<br><br>
+Solution Table: <br.<br>
+f(0) = 0 <br>
+f(1) = 1 <br>
+f(2) = 0+1 = 1 <br>
+f(3) = 1+1 = 2<br> 
+f(4) = 1+2 = 3 <br>
+f(5) = 2+3 = 5 <br>
+.<br>
+.<br>
+.<br>
+f(n) = f(n-1) + f(n-2)

@@ -1,0 +1,84 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Prims's Algorithm</span><br><br>
+Prim's algorithm is a greedy algorithm.Prim's algorithm
+constructs the minimum-cost spanning tree edge by
+edge.The difference between Prim's algorithm and
+Kruskal's algorithm is that the set of selected edges
+forms a tree at all times when using Prim's algorithm
+while a forest is formed when using Kruskal's.In Prim's algorithm, a least-cost edge (u, v) is added
+to T such that T U {(u, v)} is also a tree. This
+repeats until T contains n-1 edges.
+algorithm.
+<br><br>
+<span style="font-size:22px;color:#226666;">Algorithm:</span><br><br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+
+ Prim(G,w)
+
+ For each vertex u &isin; V[G]
+
+ do key[u] = &infin;
+
+ &pi;[u] = NIL
+
+ key[r] = 0
+
+ Q = V[G]
+
+ While Q &ne; &Phi;
+
+ Do u = Extract-Min(Q)
+
+ For each v &isin; adj[u]
+
+ do if v &isin; Q and w(u,v) < key [v]
+
+ then &pi;[v] =u
+
+ key[v] =w(u,v)
+</pre><br></div><br>
+
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:#226666;">Example:</span><br><br>
+<img src="k1.jpg" width="80%"><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+The cost adjacency matrix is:<br>
+<img src="p2.jpg" width="80%"><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+Start with 1 and pick the smallest entry in row 1 which is (A,B)<br>
+<img src="p4.jpg" width="80%"><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+Now select vertex C and edge (B, C)<br>
+<img src="p.jpg" width="80%"><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+Now Select (C, H) edge<br><br>
+<img src="p6.jpg" width="80%"><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+Now select edge (H, G)<br><br>
+<img src="p8.jpg" width="80%"><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+Now select the edge (G,F)<br><br>
+<img src="p10.jpg" width="80%"><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+We cannot take edge (F, C) as it will make a cycle. so we will take  the edge AD.<br><br>
+<img src="p13.jpg" width="80%"><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+Now select the edge ( D, E)<br><br>
+Our spanning tree is:<br><br>
+<img src="p14.jpg" width="80%"><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:#226666;">Min cost = 2+4+3+1+7+0+3= 20 units</span>
+
+</div>

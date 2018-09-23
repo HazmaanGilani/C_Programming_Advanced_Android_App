@@ -1,0 +1,80 @@
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+<div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:hidden">
+<span style="color: #226666;font-weight: bold">/*C Program for QuickSort*/</span>
+</div>
+<pre style="margin: 0; line-height: 125%"> 
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:scroll">
+<span style="color: brown">#include&lt;stdio.h&gt;</span>
+
+<span style="color: #0067BB; font-weight: bold">void</span> sort(<span style="color: #0067BB; font-weight: bold">int</span> elements[], <span style="color: #0067BB; font-weight: bold">int</span> left, <span style="color: #0067BB; font-weight: bold">int</span> right); 
+
+<span style="color: #0067BB; font-weight: bold">int</span> elements[10]; 
+
+<span style="color: violet; font-weight: bold"><span style="color: #0067BB; font-weight: bold">int</span></span> <span style="color: red; font-weight: bold">main()</span>
+{
+<span style="color: #0067BB; font-weight: bold">int</span> i, n; 
+<span style="color: #ff1493; font-weight: bold">printf</span>("\nEnter the number of elements you want to sort: ");
+<span style="color: #ff1493; font-weight: bold">scanf</span>("%d",&amp;n); 
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("\nEnter the values: ");
+
+<span style="color: green; font-weight: bold">for</span> (i = 0; i &lt; n; i++)
+{
+<span style="color: #ff1493; font-weight: bold">printf</span> ("\nEnter element %i :",i); 
+<span style="color: #ff1493; font-weight: bold">scanf</span>("%d",&amp;elements[i]); 
+}
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("\n Array before sorting:\n");
+
+<span style="color: green; font-weight: bold">for</span> (i = 0; i &lt; n; i++)
+<span style="color: #ff1493; font-weight: bold">printf</span>("[%i], ",elements[i]); 
+<span style="color: #ff1493; font-weight: bold">printf</span> ("\n");
+
+sort(elements, 0, n - 1); 
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("\n Array after sorting:\n");
+<span style="color: green; font-weight: bold">for</span> (i = 0; i &lt; n; i++)
+<span style="color: #ff1493; font-weight: bold">printf</span>("[%i], ", elements[i]); 
+}
+
+<span style="color: #0067BB; font-weight: bold">void</span> sort(<span style="color: #0067BB; font-weight: bold">int</span> elements[], <span style="color: #0067BB; font-weight: bold">int</span> left, <span style="color: #0067BB; font-weight: bold">int</span> right)
+{
+<span style="color: #0067BB; font-weight: bold">int</span> pivot, l, r; 
+l = left; 
+r = right; 
+pivot = elements[left]; 
+<span style="color: green; font-weight: bold">while</span> (left &lt; right) 
+{
+<span style="color: green; font-weight: bold">while</span> ((elements[right] &gt;= pivot) &amp;&amp; (left &lt; right)) 
+right--;
+<span style="color: green; font-weight: bold">if</span> (left != right) 
+{
+elements[left] = elements[right]; 
+left++;
+}
+<span style="color: green; font-weight: bold">while</span> ((elements[left] &lt;= pivot) &amp;&amp; (left &lt; right)) 
+left++;
+<span style="color: green; font-weight: bold">if</span>(left != right) 
+{
+
+elements[right] = elements[left]; 
+right--;
+	}
+}
+elements[left] = pivot; 
+pivot = left; 
+left = l; 
+right = r; 
+<span style="color: green; font-weight: bold">if</span> (left &lt; pivot) 
+sort(elements, left, pivot - 1); 
+<span style="color: green; font-weight: bold">if</span> (right &gt; pivot) 
+sort(elements, pivot + 1, right); 
+
+}
+</div>
+<span style="color: #996700; font-weight: bold">Output:</span>
+<div style="width:auto;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff;text-align:center;">
+<img src="qcks.jpg" width="100%">
+</div>
+</pre>
+</div>

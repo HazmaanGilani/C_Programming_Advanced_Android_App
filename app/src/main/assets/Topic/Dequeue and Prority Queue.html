@@ -1,0 +1,87 @@
+<script>
+        var dd = 6;
+        var cnt = 0;
+
+        function pre(){
+        	var rotator = document.getElementById('rr');  // change to match image ID
+            var imageDir = '';                          // change to match images folder
+
+
+            var images = ['instdq.jpg','dq1.jpg','dq2.jpg', 'dq3.jpg', 'dq4.jpg','dq5.jpg',];
+
+            cnt--;
+
+            var len = images.length;
+            var len = images.length;
+            if (cnt<0) {
+             rr.src = imageDir + images[0];
+             cnt=0;
+
+            }
+            else if (cnt < dd) {
+                rr.src = imageDir + images[cnt];
+            }
+            else if (cnt == len) {
+                rr.src = imageDir + images[0];
+                cnt = 0;
+            }
+        }
+
+        function chng() {
+
+            var rotator = document.getElementById('rr');  // change to match image ID
+            var imageDir = '';                          // change to match images folder
+
+
+       var images = ['instdq.jpg','dq1.jpg','dq2.jpg', 'dq3.jpg', 'dq4.jpg','dq5.jpg'];
+
+            cnt++;
+
+            var len = images.length;
+            if (cnt < dd) {
+                rr.src = imageDir + images[cnt];
+            }
+            else if (cnt == len) {
+                rr.src = imageDir + images[0];
+                cnt = 0;
+            }
+        }
+</script>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">DeQueue:</span><br>
+DeQueue is an acronym for Double Ended Queue.It is a Linear Data Structure similar to Queue except, here insertion and deletion occur at both ends i.e.Enqueue and Dequeue can happen at both rear and front end</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">DeQueue Operations:</span><br>
+<li>EnqueueFront(): Inserts  at the front of the de_que.
+<li>EnqueueRear(): Inserts at rear of the de_que
+<li>DequeueFront(): Deletes at the front of the de_que
+<li>DequeueRear(): Deletes at the rear of the de_que
+</div>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;width:auto;text-align:center;">
+<img id="rr" src="instdq.jpg" width="85%" style="padding:10px;margin:10px"></img></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<div style="text-align: center;padding:10px">
+<button id="clickme" onclick="chng();">
+<img src="1.png" height="40px" width="45px">
+</button>
+<button id="clickme" onclick="pre();" >
+<img src="2.png" height="40px" width="45px">
+</button>
+</div><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Application of Dequeue:</span>
+<li>It can be used to implement Stack and Queue</li>
+<li>It is used in A-Steal job scheduling algorithm e.t.c.</li>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Priority Queue:</span>
+A priority queue is a linear Data Strucure of elements in which each element has been
+assigned with certain priority and the order by which elements are
+processed should follow the following rule:
+<li>(1) An element of higher priority is processed before any element of lower priority.
+<li>(2) Two elements with the same priority are processes according to the order in
+which they were added to the queue.
+e.g<br>
+In a time sharing system, programs of high priority are processed first, and programs with the same priority form a standard queue.
+</body>

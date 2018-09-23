@@ -1,0 +1,61 @@
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+<div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:hidden">
+<span style="color: #226666">/*C Program for SelectionSort*/</span>
+</div>
+<pre style="margin: 0; line-height: 125%"> 
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:scroll">
+<span style="color: brown">#include&lt;stdio.h&gt;</span>
+
+<span style="color: #0067BB; font-weight: bold"><span style="color: #0067BB; font-weight: bold">int</span></span> <span style="color: red; font-weight: bold">main</span>()
+{
+
+<span style="color: #0067BB; font-weight: bold"><span style="color: #0067BB; font-weight: bold">int</span></span> array[100], n, c, d, position, swap;
+ 
+<span style="color: #ff1493; font-weight: bold">printf</span></span>("Enter number of elements\n");
+<span style="color: #ff1493; font-weight: bold">scanf</span>("%d", &n);
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("Enter %d integers\n", n);
+
+<span style="color: green; font-weight: bold">for</span> ( c = 0 ; c < n ; c++ )
+<span style="color: #ff1493; font-weight: bold">scanf</span>("%d", &array[c]);
+ 
+<span style="color: green; font-weight: bold">for</span> ( c = 0 ; c < ( n - 1 ) ; c++ )
+
+{
+
+ position = c;
+
+<span style="color: green; font-weight: bold">for</span> ( d = c + 1 ; d < n ; d++ )
+{
+
+<span style="color: green; font-weight: bold">if</span> ( array[position] > array[d] )
+
+ position = d;
+
+}
+
+<span style="color: green; font-weight: bold">if</span> ( position != c )
+
+{
+
+swap = array[c];
+array[c] = array[position];
+array[position] = swap;
+
+}
+}
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("Sorted list in ascending order:\n");
+
+<span style="color: green; font-weight: bold">for</span> ( c = 0 ; c < n ; c++ )
+<span style="color: #ff1493; font-weight: bold">printf</span>("%d\n", array[c]);
+ 
+<span style="color: brown; font-weight: bold">return 0;</span>
+}
+</div>
+<span style="color: #996700; font-weight: bold">Output:</span>
+<div style="width:auto;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff;text-align:center;">
+<img src="seso.jpg" width="100%">
+</div>
+</pre>
+</div>

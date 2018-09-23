@@ -1,0 +1,73 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Breadth-First Trvaersal</span><br><br>
+The breadth-first traversal of a graph is like the breadth-first traversal of a
+tree. Breadth-first tree traversal first visits all the nodes at depth zero (i.e., the
+root), then all the nodes at depth one, and so on. Since a graph has no root, when
+we do a breadth-first traversal, we must specify the vertex at which to start the traversal. Furthermore, we can define the depth of a given vertex to be the length
+of the shortest path from the starting vertex to the given vertex.
+Thus, breadth-first traversal first visits the starting vertex, then all the vertices
+adjacent to the starting vertex, and the all the vertices adjacent to those, and so on.
+<br><br>
+<span style="font-size:22px;color:#226666;">Algorithm:</span><br><br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+BFS(v)
+
+{
+
+u = v;
+
+visited[v] = 1;
+
+repeat
+
+{
+
+for all vertices w adjacent from u do
+
+{
+if (visited[w] = 0) then
+
+{
+
+add w to queue;
+
+visited[w] = 1;
+
+}
+
+}
+
+if queue is empty then return;
+
+delete u from queue;
+
+}
+
+ until (false)
+
+}
+</pre></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:#226666;">Example:</span><br><br>
+here we take vertex 1 as source<br><br>
+<img src="GTRAV.jpg" width="80%"><br>
+<img src="brt1.jpg" width="90%"><br><br><br>
+<img src="brt2.jpg" width="90%"><br><br>
+Breadth First Transversal is:
+<span style="font-size:22px;color:#226666;">1 &ndash; 3 &ndash; 2 &ndash; 4 &ndash; 6 &ndash; 5</span>
+</body>
+</div>
+

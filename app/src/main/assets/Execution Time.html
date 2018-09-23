@@ -1,0 +1,38 @@
+<div style="background:#ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+ <div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:hidden">
+<span style="color: #226666;font-weight: bold">/*C Program to calculate execution time of a program*/</span>
+</div>
+<pre style="margin: 0; line-height: 200%"> 
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:scroll">
+<span style="color: brown">#include&lt;stdio.h&gt;</span>
+<span style="color: brown">#include&lt;conio.h&gt;</span>
+<span style="color: brown">#include&lt;time.h&gt;</span>
+<span style="color: #0067BB; font-weight: bold">int</span> main() 
+{
+ <span style="color: #0067BB; font-weight: bold">int</span> i,n;
+ double total_time;
+ clock_t start, end;
+
+ start = clock();
+
+ srand(time(NULL));
+ <span style="color: #ff1493; font-weight: bold">printf</span>("Enter n:");
+ <span style="color: #ff1493; font-weight: bold">scanf</span>("%d",&n);
+ <span style="color: green; font-weight: bold">for</span> (i = 0; i < n; i++) 
+ {
+  <span style="color: #ff1493; font-weight: bold">printf</span>("Programming is fun\n");
+ }
+ end = clock();
+ total_time = ((double) (end - start));
+ <span style="color: #ff1493; font-weight: bold">printf</span>("\nTime taken by program for execution is: %f", total_time);
+ <span style="color: brown; font-weight: bold">return</span> 0;
+}
+</div>
+
+
+<span style="color: #996700; font-weight: bold">Output:</span>
+<div style="width:auto;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff;text-align:center;">
+<img src="extime.jpg" width="100%">
+</div>
+</pre>
+</div>

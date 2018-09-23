@@ -1,0 +1,46 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Bubble Sort:</span><br>
+The bubble sort is similar to selection sort,In buuble sort algorithm,on each pass
+we place at least one item in its proper location.bubble sort works by comparing two items in the list at a time. 
+bubble sort will always compare two consecutive items in the list, and swap them if they are out of order.
+If we assume that we start at the beginning of the list, this means that at each pass through the algorithm,
+the largest remaining item in the list will be placed at its proper location in the list.<br><br>
+
+<span style="font-size:22px;color:#226666;">Algorithm for bubble sort</span><br>
+<pre style="line-height:120%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+for i=N-1 to 2 {
+
+set swap flag to false
+
+for j=1 to i {
+
+if list[j-1] > list[j]
+swap list[j-1] and list[j]
+set swap flag to true
+
+}
+
+if swap flag is false, break. The list is sorted.
+
+}
+</pre>
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Time Complexity:</span><br>
+The complexity of sorting algorithm is depends upon the number of comparisons that are made. Total comparisons in Bubble sort is: n ( n &minus; 1) / 2 = n^2 &minus; n<br><br>
+Best case : O (n^2)<br>
+Average case : O (n^2)<br>
+Worst case : O (n^2)<br>
+</div>
+</body>

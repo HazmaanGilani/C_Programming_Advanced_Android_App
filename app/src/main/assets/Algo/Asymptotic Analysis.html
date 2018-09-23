@@ -1,0 +1,64 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Asymptotic Analysis:</span>
+The running time of an algorithm depends upon various characteristics and slight
+variation in the characteristics varies the running time. The algorithm efficiency
+and performance in comparison to alternate algorithm is best described by the
+order of growth of the running time of an algorithm. Suppose one algorithm for a
+problem has time complexity as c3n^2 and another algorithm has c1n^3 +c2n^2 then it
+can be easily observed that the algorithm with complexity c3n^2 will be faster than
+the one with complexity c1n^3 +c2n^2 for sufficiently larger values of n. Whatever be
+the value of c1, c2 and c3 there will be an 'n' beyond which the algorithm with
+complexity c3n^2 is faster than algorithm with complexity c1n^3 +c2n^2, we refer this
+n as breakeven point. It is difficult to measure the correct break even point
+analytically, so Asymptotic notation are introduced that describe the algorithm
+efficiency and performance in a meaningful way. These notations describe the
+behavior of time or space complexity for large instance characteristics. Some
+commonly used asymptotic notations are:<br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Big Oh-notation (O):</span><br>
+The upper bound for the function 'f' is provided by the big
+oh notation (O).<br>
+Definition: f(n) = O(g(n)) iff there are two
+positive constants c and n0 such that
+|f(n)| &le; c |g(n)| for all n &ge; n0<br>
+If f(n) is nonnegative, we can simplify the last
+condition to
+0 &le; f(n) &le; c g(n) for all n &ge; n0<br>
+ We say that "f(n) is big-O of g(n)."
+ As n increases, f(n) grows no faster than g(n).<br>
+In other words, g(n) is an asymptotic upper
+bound on f(n).<br>
+<img src="Bo.jpg" width="80%"><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Big Omega-notation (&ohm;):</span><br>
+The lower bound for the function 'f' is provided by the
+big omega notation (&ohm;).<br>
+ Definition: f(n) = 
+(g(n)) iff there are two
+positive constants c and n0 such that
+|f(n)| &ge; c |g(n)| for all n &ge; n0<br>
+ If f(n) is nonnegative, we can simplify the last
+condition to<br>
+0 &le; c g(n) &le; f(n) for all n &ge; n0
+ We say that "f(n) is omega of g(n)."<br>
+ As n increases, f(n) grows no slower than g(n).<br>
+In other words, g(n) is an asymptotic lower bound
+on f(n).<br>
+<img src="BOM.jpg" width="80%"><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Big-Theta notation(&theta;):</span><br><br>
+The tight bound for the function 'f' is
+provided by the big theta notation (&theta;).<br>
+ Definition: f(n) = &theta;(g(n)) iff there are three
+positive constants c1, c2 and n0 such that
+c1|g(n)| &le; |f(n)| &le; c2|g(n)| for all n &ge; n0<br>
+ If f(n) is nonnegative, we can simplify the last
+condition to<br>
+0 &le; c1 g(n) &le; f(n) &le; c2 g(n) for all n &ge; n0<br>
+ We say that "f(n) is theta of g(n)"<br>
+ As n increases, f(n) grows at the same rate as
+g(n). In other words, g(n) is an asymptotically
+tight bound on f(n).
+<img src="BTH.jpg" width="80%"><br></div><br>
+</body>

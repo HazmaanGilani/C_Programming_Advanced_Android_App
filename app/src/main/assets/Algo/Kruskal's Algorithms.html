@@ -1,0 +1,60 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Kruskal' Algorithm</span><br><br>
+Kruskal's Algorithm is a greedy algorithm. A greedy algorithm chooses some local optimum (i.e.
+picking an edge with the least weight in a MST).
+Kruskal's algorithm works as follows: Take a graph with 'n' vertices, keep on adding the
+shortest (least cost) edge, while avoiding the creation of cycles, until (n - 1) edges
+have been added. Sometimes two or more edges may have the same cost.
+The order in which the edges are chosen, in this case, does not matter. Different MST's
+may result, but they will all have the same total cost, which will always be the
+minimum cost.
+
+<br><br>
+<span style="font-size:22px;color:#226666;">Algorithm:</span><br><br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+Kruskal(G,w)
+
+ A = 0
+
+ For each vertex v &isin; V[G]
+
+ do make_set(v)
+
+ sort the edge of E into nondecreasing order of weight
+
+ For each edge(u,v) &isin; E taken in nondecresing order of weight
+
+ do if find_set(u) &ne; find-set(v)
+
+ then A =A U {(u,v)}
+
+ union(u,v)
+
+ Return A
+</pre><br></div>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:#226666;">Example:</span><br><br>
+<img src="k1.jpg" width="80%"><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+Using Kruskal's Method
+<img src="k2.jpg" width="80%"><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+The minimum spanning tree is:
+<img src="k3.jpg" width="80%"><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:#226666;">min cost = 2+4+3+1+7+0+3 = 20 units.</span>
+
+</div>
+</body>

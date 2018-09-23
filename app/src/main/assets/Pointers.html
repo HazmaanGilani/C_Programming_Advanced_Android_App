@@ -1,0 +1,126 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">INTRODUCTION:</span><br><br>
+When variables are declared memory is allocated to each variable. C provides data manipulation with addresses of variables therefore execution time is reduced. Such concept is possible with special data type called pointer. A pointer is a variable which holds the address of another variable or identifier this allows indirect access of data.<br>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">DECLARATION:</span><br><br>
+1. To differentiate ordinary variables from pointer variable, the pointer variable should
+proceeded by called "value at address" operator. It returns the value stored at particular address. It is also called an indirection operator( symbol * ).<br>
+2. Pointer variables must be declared with its type in the program as ordinary variables.<br>
+3. Without declaration of a pointer variable we cannot use in the program.<br>
+4. A variable can be declared as a pointer variable and it points to starting byte address of
+any data type.<br><br>
+SYNTAX:
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;"> Data type *pointer variable;<br></pre><br>
+The declaration tells the compiler 3 things about variable p<br>
+a) The asterisk (*) tells that variable p is a pointer variable<br>
+b) P needs a memory location<br>
+c) P points to a variable of type data type.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+Ex: int * p, v; <br>
+float *x;<br><br>
+</pre>
+In the first declaration v is a variable of type integer and p is a pointer variable. <br>
+                       <span style="font-size:22px;color:#226666;">V stores value p stores address</span><br>
+In the 2nd declaration x is a pointer variable of floating point data type.<br><br> 
+Pointer variables are initialized by p= &v, it indicates p holds the starting address of
+integervariable v.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+ int v=20,*p; <br>
+ p=&v; /*address of v stored in p*/<br>
+  V          p <br>
+  20         1000 
+  </pre>
+  Let us assume that address of v is 1000. This address is stored in p.<br> Now p holds address of v now *p gives the value stored at the address pointer by p i.e *p=20.<br></div><br>
+  <div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">IMPORTANT POINTS:</span><br><br>
+1. A pointer variable can be assigned to another pointer variable, if both are pointing to the same data type.<br>
+2. A pointer variable can be assigned a NULL value.<br>
+3. A pointer variable cannot be multiplied or divided by a constant.<br>
+Ex: p*3 or p/3 where p is a pointer variable<br>
+4. One pointer variable can be subtracted torn another provided both winters points to Elements on same away.<br>
+5. C allows us to add integers to or subtract integers from pointers.<br>
+ Ex: p1+4, p2-2, p1-p2 .If both p1, p2 are pointers to same way then p2-p1 gives the "number of elements between p1,p2"<br>
+6. Pointer variable can be intermingled or decremented p++ & p- -
+The values of a variable can be released in to way <br>
+a)by using variable name<br>
+b)by using adders.<br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Disadvantages:</span><br>
+1. Unless pointer is defined and initialized properly use of pointers may lead to disastrous situations.<br>
+2. Using pointers sometimes be confusions.<br>
+<br>
+<span style="font-size:22px;color:violet;">Void Pointers :</span> We can declare a pointer to be of any data type void and can assign a void pointer to any other type.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+Ex : 
+int x:
+void p;
+p= &x;
+*p = 27
+printf(&quot;%d&quot;,*p);
+</pre><br><br>
+It gives error because the pointer p is of type void and cannot hold any value. So we have to type cast the pointer variable from one type to other type.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+int x = 27; 
+void *p; 
+p=&x; 
+printf (&quot; %d&quot;, * ((int*)p));
+</pre>
+</div>
+</body>

@@ -1,0 +1,300 @@
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+<div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:hidden">
+<span style="color: #226666;font-weight: bold">/*C Program to implement priority Queue*/</span>
+</div>
+
+<pre style="margin: 0; line-height: 100%"> 
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:scroll">
+<span style="color: brown">#include&lt;stdio.h&gt;</span>
+<span style="color: brown">#include&lt;conio.h&gt;</span>
+<span style="color: brown">#define MAX 10</span>
+
+
+<span style="color: #0067BB; font-weight: bold">void</span> insert_by_priority(<span style="color: #0067BB; font-weight: bold">int</span>);
+
+<span style="color: #0067BB; font-weight: bold">void</span> delete_by_priority(<span style="color: #0067BB; font-weight: bold">int</span>);
+
+<span style="color: #0067BB; font-weight: bold">void</span> create();
+
+<span style="color: #0067BB; font-weight: bold">void</span> check(<span style="color: #0067BB; font-weight: bold">int</span>);
+
+<span style="color: #0067BB; font-weight: bold">void</span> display();
+
+ 
+
+<span style="color: #0067BB; font-weight: bold">int</span> priority_queue[MAX];
+
+<span style="color: #0067BB; font-weight: bold">int</span> front, rear;
+
+ 
+
+<span style="color: #0067BB; font-weight: bold">void</span> <span style="color: red; font-weight: bold">main</span>()
+
+{
+
+<span style="color: #0067BB; font-weight: bold">int</span> n, ch;
+
+ 
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("\n1 - Insert ");
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("\n2 - Delete ");
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("\n3 - Display ");
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("\n4 - Exit");
+
+ 
+
+create();
+
+ 
+
+<span style="color: green; font-weight: bold">while</span> (1)
+
+{
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("\nEnter your choice : ");
+
+<span style="color: #ff1493; font-weight: bold">scanf</span>("%d", &ch);
+
+ 
+
+<span style="color: green; font-weight: bold">switch</span> (ch)
+
+{
+
+<span style="color:#006699; font-weight: bold">case</span> 1: 
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("\nEnter value to be inserted : ");
+
+<span style="color: #ff1493; font-weight: bold">scanf</span>("%d",&n);
+
+insert_by_priority(n);
+
+break;
+
+<span style="color:#006699; font-weight: bold">case</span> 2:
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("\nEnter value to delete : ");
+
+<span style="color: #ff1493; font-weight: bold">scanf</span>("%d",&n);
+
+delete_by_priority(n);
+
+break;
+
+<span style="color:#006699; font-weight: bold">case</span> 3: 
+
+display();
+
+break;
+
+<span style="color:#006699; font-weight: bold">case</span> 4: 
+
+exit(0);
+
+default: 
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("\nChoice is incorrect, Enter a correct choice");
+
+}
+
+}
+
+}
+
+ 
+
+
+<span style="color: #0067BB; font-weight: bold">void</span> create()
+
+{
+
+front = rear = -1;
+
+}
+
+ 
+
+
+<span style="color: #0067BB; font-weight: bold">void</span> insert_by_priority(<span style="color: #0067BB; font-weight: bold">int</span> data)
+
+{
+
+<span style="color: green; font-weight: bold">if</span> (rear >= MAX - 1)
+
+{
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("\nQueue overflow no more elements can be inserted");
+
+<span style="color: brown; font-weight: bold">return</span>;
+
+}
+
+<span style="color: green; font-weight: bold">if</span> ((front == -1) && (rear == -1))
+
+{
+
+front++;
+
+rear++;
+
+priority_queue[rear] = data;
+
+<span style="color: brown; font-weight: bold">return</span>;
+
+}
+
+else
+
+check(data);
+
+rear++;
+
+}
+
+ 
+
+
+
+<span style="color: #0067BB; font-weight: bold">void</span> check(<span style="color: #0067BB; font-weight: bold">int</span> data)
+
+{
+
+<span style="color: #0067BB; font-weight: bold">int</span> i,j;
+
+ 
+
+<span style="color: green; font-weight: bold">for</span> (i = 0; i <= rear; i++)
+
+{
+
+<span style="color: green; font-weight: bold">if</span> (data >= priority_queue[i])
+
+{
+
+<span style="color: green; font-weight: bold">for</span> (j = rear + 1; j > i; j--)
+
+{
+
+priority_queue[j] = priority_queue[j - 1];
+
+}
+
+priority_queue[i] = data;
+
+<span style="color: brown; font-weight: bold">return</span>;
+
+}
+
+}
+
+priority_queue[i] = data;
+
+}
+
+ 
+
+
+
+<span style="color: #0067BB; font-weight: bold">void</span> delete_by_priority(<span style="color: #0067BB; font-weight: bold">int</span> data)
+
+{
+
+<span style="color: #0067BB; font-weight: bold">int</span> i;
+
+ 
+
+<span style="color: green; font-weight: bold">if</span> ((front==-1) && (rear==-1))
+
+{
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("\nQueue is empty");
+
+<span style="color: brown; font-weight: bold">return</span>;
+
+}
+
+ 
+
+<span style="color: green; font-weight: bold">for</span> (i = 0; i <= rear; i++)
+
+{
+
+<span style="color: green; font-weight: bold">if</span> (data == priority_queue[i])
+
+{
+
+<span style="color: green; font-weight: bold">for</span> (; i < rear; i++)
+
+{
+
+priority_queue[i] = priority_queue[i + 1];
+
+}
+
+ 
+
+priority_queue[i] = -99;
+
+rear--;
+
+ 
+
+<span style="color: green; font-weight: bold">if</span> (rear == -1) 
+
+front = -1;
+
+<span style="color: brown; font-weight: bold">return</span>;
+
+}
+
+}
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("\n%d not found in queue to delete", data);
+
+}
+
+ 
+
+
+
+<span style="color: #0067BB; font-weight: bold">void</span> display()
+
+{
+
+<span style="color: green; font-weight: bold">if</span> ((front == -1) && (rear == -1))
+
+{
+
+<span style="color: #ff1493; font-weight: bold">printf</span>("\nQueue is empty");
+
+<span style="color: brown; font-weight: bold">return</span>;
+
+}
+
+ 
+
+<span style="color: green; font-weight: bold">for</span> (; front <= rear; front++)
+
+{
+
+<span style="color: #ff1493; font-weight: bold">printf</span>(" %d ", priority_queue[front]);
+
+}
+
+ 
+
+front = 0;
+
+}
+</div>
+
+
+<span style="color: #996700; font-weight: bold">Output:</span>
+<div style="width:auto;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff;text-align:center;">
+<img src="prioque.jpg" width="100%">
+</div>
+</pre>
+</div>

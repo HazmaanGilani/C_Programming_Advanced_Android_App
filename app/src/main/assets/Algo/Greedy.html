@@ -1,0 +1,30 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Greedy:</span><br><br>
+The Greedy approach constructs the solution through a sequence of steps. Each step is chosen such
+that it is the best alternative among all feasible choices that are available. The choice of a step once
+made cannot be changed in subsequent steps.
+The choice of each step is a greedy approach is done based in the following:
+<li> It must be feasible
+<li> It must be locally optimal
+<li> It must be unalterable<br><br>
+
+<span style="font-size:22px;color:#226666;">Steps required to develop  greedy algorithm:</span><br><br>
+
+<li> Determine the optimal substructure of the problem.
+<li> Develop a recursive solution.
+<li> Prove that at any stage of recursion one of the optimal choices is greedy choice. Thus it is always safe to make greedy choice.
+<li> Show that all but one of the sub problems induced by having made the greedy choice are empty.
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:#226666;">Example:</span><br><br>
+Suppose a greedy person has some 25p, 20p, 10p,
+5paise coins. When someone asks him for some change then be wants to given the change with
+minimum number of coins. Now, let someone requests for a change of top then he first selects 25p.
+Then the remaining amount is 45p. Next, he selects the largest coin that is less than or equal to 45p i.e.
+25p. The remaining 20p is paid by selecting a 20p coin. So the demand for top is paid by giving total 3
+numbers of coins. This solution is an optimal solution. Now, let someone requests for a change of 40p
+then the Greedy approach first selects 25p coin, then a 10p coin and finally a 5p coin. However, the
+some could be paid with two 20p coins. So it is clear from this example that Greedy approach tries to
+find the optimal solution by selecting the elements one by one that are locally optimal. But Greedy
+method never gives the guarantee to find the optimal solution.</div></body>

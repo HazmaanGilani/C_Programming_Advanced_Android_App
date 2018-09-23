@@ -1,0 +1,115 @@
+<script>
+        var dd = 10;
+        var cnt = 0;
+
+        function pre(){
+        	var rotator = document.getElementById('rr');  // change to match image ID
+            var imageDir = '';                          // change to match images folder
+
+
+      var images = ['instcq.jpg','cq.jpg','cq1.jpg', 'cq2.jpg', 'cq3.jpg','cq4.jpg','cq5.jpg','cq6.jpg','cq7.jpg','cq8.jpg'];
+ 
+            cnt--;
+
+            var len = images.length;
+            if (cnt<0) {
+             rr.src = imageDir + images[0];
+             cnt=0;
+
+            }
+            else if (cnt < dd) {
+                rr.src = imageDir + images[cnt];
+            }
+            else if (cnt == len) {
+                rr.src = imageDir + images[0];
+                cnt = 0;
+            }
+            
+        }
+
+        function chng() {
+
+            var rotator = document.getElementById('rr');  // change to match image ID
+            var imageDir = '';                          // change to match images folder
+
+
+       var images = ['instcq.jpg','cq.jpg','cq1.jpg', 'cq2.jpg', 'cq3.jpg','cq4.jpg','cq5.jpg','cq6.jpg','cq7.jpg','cq8.jpg'];
+
+            cnt++;
+
+            var len = images.length;
+            if (cnt < dd) {
+                rr.src = imageDir + images[cnt];
+            }
+            else if (cnt == len) {
+                rr.src = imageDir + images[0];
+                cnt = 0;
+            }
+        }
+
+</script>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Circular Queue</span><br>
+Circular Queue is Linear DataStructure similar to Queue,But In circular queue the last node is connected back to the first node to make a circle.Elements are added at the rear end and the elements are deleted at front end of the queue.It also Follows FIFO(First-in,first-out) principle.
+Circular Queue overcome the drawback of loss of access to memory by Queue.In queue front,rear are calculated with increment or decrement but In circular queue front,rear,are calculated differently
+</div><br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+<span style="font-size:22px;color:violet;">Front:</span> front=(front+1)%capacity
+</pre>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+
+<span style="font-size:22px;color:violet;">rear:</span> rear=(rear+1)%capacity
+</pre><br>
+
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Size:</span>
+The front and rear indices can be used to find out the current size of the queue, that is, the number of elements currently in the queue. The value rear - front gives us the size, and when this value is negative, we simply add the capacity to this to give us the size. Thus in general we have
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+size = ( rear - front + capacity) % capacity.
+</pre>
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;width:auto;text-align:center;">
+<img id="rr" src="instcq.jpg" width="85%" style="padding:10px;margin:10px"></img></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<div style="text-align: center;padding:10px">
+<button id="clickme" onclick="chng();">
+<img src="1.png" height="40px" width="45px">
+</button>
+<button id="clickme" onclick="pre();" >
+<img src="2.png" height="40px" width="45px">
+</button>
+</div><br></div><br>

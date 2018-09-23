@@ -1,0 +1,137 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+
+In Preprocessing, source code is expanded into a larger form that is simpler for the compiler to understand,Preprocessor directives are always initialized at the beginning of the program. it begins with the symbol (#) hash. 
+<br/><br/>
+"Commands used in preprocessor are called preprocessor directives" .
+Below is the list of preprocessor directives that C language offers.<br/></div><br/>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+
+<span style="font-size:22px;color:violet;">Macro</span><br/>
+It is used in defining Constant Symbol.<br/>
+syntax:<br/>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+#define </pre><br/>
+Example:<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+             #define size 10
+                </pre><br>
+It replaces the instances of size with constant value 10.<br>
+</div><br/>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<b><font color="violet"> Header file inclusion 	</font></b><br/>The preprocessor directive include< file name> can be used to include
+any file into user program if the function  or macro definitions are
+present in the source code.
+syntax:<br/>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+#include &lt;file_name></pre><br/> 	
+<br/></div><br/>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;"> Conditional compilation</span><br/><br/>
+These are the Set of commands that are included or excluded in source program to Compile the Program with respect to the condition.<br/><br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+#ifdef, #if, #endif, #else, #ifndef</pre><br/>
+<table border="2" cellpadding="5" >
+<tr><td>#ifdef</td><td>returns True if the macro is defined</td></tr>
+<tr><td>#endif</td><td>Ends preprocessor conditional</td></tr>
+<tr><td>#if</td><td>checks if a compile time condition is true</td></tr>
+<tr><td>#else</td><td>The alternative of #if</td></tr>
+<tr><td>#ifndef</td><td>returns True if the macro is not defined</td></tr>
+</table>
+</div><br/>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;"> Other directives</span> 	<br/>
+#undef is used to undefine a defined macro variable.<br> <br>
+
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+#undef<br/> 	
+</pre><br>
+#pragma is used to call a function before the main function and call another function after the main function in a C program<br/><br>
+syntax:<br/>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+#pragma<br/> </pre>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+E.X:
+   #pragma startup f1 #pragma exit f2<br/> </pre><br>
+Here f1 is called before main and f2 is called after main
+
+
+</div>
+</body>

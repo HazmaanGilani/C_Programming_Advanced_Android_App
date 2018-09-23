@@ -1,0 +1,82 @@
+<script>
+        var dd = 8;
+        var cnt = 0;
+
+        function pre(){
+        	var rotator = document.getElementById('rr');  // change to match image ID
+            var imageDir = '';                          // change to match images folder
+
+
+      var images = ['inst.jpg','sta1.jpg','sta2.jpg', 'sta3.jpg', 'sta4.jpg','sta5.jpg','sta6.jpg','sta7.jpg'];
+ 
+            cnt--;
+
+            var len = images.length;
+            var len = images.length;
+            if (cnt<0) {
+             rr.src = imageDir + images[0];
+             cnt=0;
+
+            }
+            
+            else if (cnt < dd) {
+                rr.src = imageDir + images[cnt];
+            }
+            else if (cnt == len) {
+                rr.src = imageDir + images[0];
+                cnt = 0;
+            }
+            
+        }
+
+        function chng() {
+
+            var rotator = document.getElementById('rr');  // change to match image ID
+            var imageDir = '';                          // change to match images folder
+
+
+       var images = ['inst.jpg','sta1.jpg','sta2.jpg', 'sta3.jpg', 'sta4.jpg','sta5.jpg','sta6.jpg','sta7.jpg'];
+
+            cnt++;
+
+            var len = images.length;
+            if (cnt < dd) {
+                rr.src = imageDir + images[cnt];
+            }
+            else if (cnt == len) {
+                rr.src = imageDir + images[0];
+                cnt = 0;
+            }
+        }
+
+</script>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Stack:</span><br>
+A stack is a Linear Data Structure in which an element is inserted or deleted only at one end, called the top of the stack.It is also known as LIFO (last in, first out) Data Structure.Stack is an Abstract Datatype.<br><br>
+It supports two main operations:
+<li>push(): Inserts element  on top of the stack
+<li>pop():  Removes element from top stack<br>
+</div><br>
+
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;width:auto;text-align:center;">
+<img id="rr" src="inst.jpg" width="85%" style="padding:10px;margin:10px"></img></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<div style="text-align: center;padding:10px">
+<button id="clickme" onclick="chng();">
+<img src="1.png" height="40px" width="45px">
+</button>
+<button id="clickme" onclick="pre();" >
+<img src="2.png" height="40px" width="45px">
+</button>
+</div><br></div><br><div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Application of Stack:</span>
+<li>Stack is used by compilers to check for balancing of parentheses, brackets
+and braces.
+<li>Stack is used in Recursion to store pending function calls, intermediate arguments and return values
+<li>Stack is used for Reversal of data
+<li>Stack is used for Expression Evaluation and Conversion
+</div><br><br>
+
+
+</body>

@@ -1,0 +1,27 @@
+<div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+  
+  <div style="width:auto;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:hidden">
+<span style="color: #226666">/*C Program Check whether given number is Armstrong number or not .*/</span>
+</div>
+<pre style="margin: 0; line-height: 125%">
+<div style="width:auto;margin:20px 0px 0px 0px;padding:.2em .6em;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;background:#ffffff;;overflow:scroll">
+<span style="color: brown">#include&lt;stdio.h&gt;</span>
+<span style="color: #0067BB; font-weight: bold">void</span> <span style="color: red; font-weight: bold">main</span>(){
+<span style="color: #0067BB; font-weight: bold">int</span> num,r,sum<span style="color: #333333">=</span><span style="color: purple; font-weight: bold">0</span>,temp;
+printf(<span style="color:#32CD32">&quot;Enter a number: &quot;</span>);
+scanf(<span style="color:#32CD32">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>num);
+<span style="color: #008800; font-weight: bold">for</span>(temp<span style="color: #333333">=</span>num;num<span style="color: #333333">!=</span><span style="color: purple; font-weight: bold">0</span>;num<span style="color: #333333">=</span>num<span style="color: #333333">/</span><span style="color: purple; font-weight: bold">10</span>){
+    r<span style="color: #333333">=</span>num<span style="color: #333333">%</span><span style="color: purple; font-weight: bold">10</span>;
+    sum<span style="color: #333333">=</span>sum<span style="color: #333333">+</span>(r<span style="color: #333333">*</span>r<span style="color: #333333">*</span>r);
+    }
+<span style="color: #008800; font-weight: bold">if</span>(sum<span style="color: #333333">==</span>temp)
+     printf(<span style="color:#32CD32">&quot;%d is an Armstrong number&quot;</span>,temp);
+<span style="color: #008800; font-weight: bold">else</span>
+    printf(<span style="color:#32CD32">&quot;%d is not an Armstrong number&quot;</span>,temp);
+}
+</div>
+<span style="color: #996700; font-weight: bold">Output:</span>
+<div style="width:auto;padding:0px 10px 10px 10px;border:2px solid #eeeeee;background:#ffffff;box-shadow:1px 1px 1px 1px grey;overflow:hidden;background:#ffffff;text-align:center;">
+<img src="arm.jpg" width="80%">
+</div>
+</pre></div>

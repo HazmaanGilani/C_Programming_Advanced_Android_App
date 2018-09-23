@@ -1,0 +1,95 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:#226666;">Algorithm for Convertion Infix to Postfix Expression:</span><br>
+<pre style="line-height:130%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+opstk = the empty stack;
+
+ while (not end of input) {
+
+ symbol = next input character;
+
+ if (symbol is an operand) 
+
+ add symbol to postfix string
+
+ else {
+
+ while (!empty (opstk) and prcd (top (opstk),
+symbol)>0){
+
+ topsymb = pop(opstk);
+
+ add topsymb to the postfix string; 
+
+ }/*end while*/
+
+ if (empty (opstk) || symbol! = ')' ) 
+
+ push (opstk,symbol); 
+
+else 
+/*pop the open parenthesis and discard it */
+
+topsymb = pop(opstk);
+
+} /* end else */
+
+}/* end while */
+
+/* output any remaining operator */
+
+while (!empty (opstk)){
+
+ top symbol = pop (opstk);
+
+ add topsymb to the postfix string;
+
+} /* end while * /
+
+/*output any remaining operator*/
+</pre><br>
+
+Example:The given input as infix expression is:- (m + n)*(k + p) / (g / b) ^ (a ^ b / c)<br><br>
+<table border="2" cellpadding="5" style="color:#199697">
+<tr><th>Symbol</th><th>Stack</th><th>Postfix Expression</th></tr>
+<tr><td>(</td><td> (</td><td></td></tr>
+<tr><td>m</td><td> (</td><td> m</td></tr>
+<tr><td>+ </td><td>( + </td><td>m</td></tr>
+<tr><td>n </td><td>( + </td><td>m n</td></tr>
+<tr><td>) </td><td>empty </td><td>  m n +</td></tr>
+<tr><td>*</td><td> * </td><td>m n+ </td></tr>
+<tr><td>(</td><td> *( </td><td>m n +</td></tr>
+<tr><td>k</td><td> *( </td><td>m n + k</td></tr>
+<tr><td>+</td><td> *(+ </td><td>m n + k</td></tr>
+<tr><td>p</td><td> *(+ </td><td>m n + k p</td></tr>
+<tr><td>)</td><td> * </td><td>m n + k p +</td></tr>
+<tr><td>/</td><td> / </td><td>m n + k p + *</td></tr>
+<tr><td>(</td><td> / ( </td><td>m n + k p + *</td></tr>
+<tr><td>g</td><td> / ( </td><td>m n + k p + * g</td></tr>
+<tr><td>/</td><td> / ( /</td><td></td></tr>
+<tr><td>b</td><td> / ( / </td><td>m n + k p + * g b</td></tr>
+<tr><td>)</td><td> / </td><td>m n + k p + * g b/</td></tr>
+<tr><td>^</td><td> / ^ </td><td></td></tr>
+<tr><td>(</td><td> / ^ (</td><td></td></tr>
+<tr><td>a</td><td> / ^ ( </td><td>m n + k p + *g b / a</td></tr>
+<tr><td>^</td><td> / ^ ( ^</td><td></td></tr>
+<tr><td>b</td><td> / ^ ( ^ </td><td>m n + k p + * g b / a b</td></tr>
+<tr><td>/</td><td> / ^ ( / </td><td>m n + k p + * g b / a b^</td></tr>
+<tr><td>c</td><td> / ^ ( / </td><td>m n + k p + *g b / a b ^ c</td></tr>
+<tr><td>)</td><td> / ^ </td><td>m n + k p + * g b / a b ^ c /</td></tr>
+<tr><td></td><td></td><td>m n + k p + * g b / a b ^ c / ^ /</td></tr>
+</table>
+<br><br>
+
+The postfix expression is:<span style="font-size:22px;color:#226666;"> mn + kp + *gb / ab ^ c / ^ /</span>

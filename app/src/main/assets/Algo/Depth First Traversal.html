@@ -1,0 +1,61 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Depth-First Trvaersal</span><br><br>
+The depth-first traversal of a graph is like the depth-first traversal of a tree.
+Since a graph has no root, when we do a depth-first traversal, we must specify the
+vertex at which to begin. Depth-first traversal of a graph visits a vertex and then
+recursively visits all the vertices adjacent to that node. The catch is that the graph
+may contain cycles, but the traversal must visit every vertex at most once. The
+solution to the problem is to keep track of the nodes that have been visited, so that
+the traversal does not suffer the fate of infinite recursion.<br><br>
+<span style="font-size:22px;color:#226666;">Algorithm:</span><br><br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+Algoithm DFS(v)
+
+{
+
+visited[v] = 1;
+
+for each vertex q adjacent from v do
+
+{
+
+if (visited[w] = 0 )
+
+then DFS(w);
+
+}
+
+}
+</pre></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:#226666;">Example:</span><br><br>
+<img src="GTRAV.jpg" width="80%"><br>
+<img src="dpt1.jpg" width="80%"><br><br>
+
+1 &ndash; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Mark 1<br>
+1 &ndash;   3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark 3<br>
+1 &ndash; 3 &ndash; 2   &nbsp;&nbsp;Mark 2<br><br>
+1 is marked, so visit 6<br>
+1 &ndash; 3 &ndash; 2 &ndash; 6<br><br>
+Move to adj list of 6<br>
+1 is already marked<br><br>
+1 &ndash; 3 &ndash; 2 &ndash; 6 &ndash; 5<br>
+Move to adj list of 5<br><br>
+3 is already marked<br>
+So move to adj list of 6 again<br><br>
+Depth First Transversal is:<br>
+<span style="font-size:22px;color:#226666;">1 &ndash; 3 &ndash; 2 &ndash; 6 &ndash; 5 &ndash; 4</span>
+</div>
+</body>

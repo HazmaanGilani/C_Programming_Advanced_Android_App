@@ -1,0 +1,301 @@
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<body style="font-size:20px ;">
+<span style="font-size:22px;color:violet;">Strings</span><br><br>
+<li> In C language, an array of characters is known as a string.<br>
+    char st[80];<br>
+
+<li> This statement declares a string array with 80 characters.<br>
+<li> The control character "0"which represents a null character is placed automatically at the end of any string used.
+STRING HANDLING FUNCTIONS IN C: <br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+There are four important string Handling functions in C language.<br><br>
+1.  strlen( ) function<br>
+2. strcpy( ) function<br>
+3. strcat( ) function<br>
+4. strcmp( ) function<br>
+5.  strlen( ) Function:</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+ <span style="font-size:22px;color:violet;">strlen( ) function :</span> It is used to find the length of a character string. <pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+ Ex: int n; 
+ char st[20] = "Programming"; 
+ n = strlen(st);</pre><br><br>
+<li> This will return the length of the string 11 which is assigned to an integer variable n.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+<li> Note: the null charcter "\0" available at the end of a string is not counted.<br></pre></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+ <span style="font-size:22px;color:violet;">strcpy( ) Function:</span>
+ strcpy( ) function is used to copy from one string to another string.
+<br><pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+Ex : 
+ char str[15];
+ strcpy(str, "Programming") ; </pre><br>
+This will assign the string "Programming" to the character variable str.
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;"> 
+* Note: character value like str = "Programming"; cannot be assigned in C language.<br></pre></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+  <span style="font-size:22px;color:violet;">strcat( ) Function:</span>
+  strcat( ) function is used to join character, Strings. When two character strings are joined, it is referred as concatenation of strings. <br><br>
+  <pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+ Ex: <br>
+ char str[20] = "Programming";<br>
+ char str2[20]= "is Fun"<br>
+ strcat(str,str2);<br><br>
+ </pre>
+ <li> This will join the two strings and store the result in str and the result is Programming is fun<br>
+ <pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+ <li> Note: the resulting string is always stored in the left side string variable.<br></pre></div><br>
+ <div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;"> strcmp( ) Function:</span>
+strcmp ( ) function is used to compare two character strings.<br>
+<li> It returns a 0 when two strings are identical. Otherwise it returns a numerical
+value which is the different in ASCII values of the first mismatching character
+of the strings being compared.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+char str1[20] = "SAD";<br>
+char str2[20] = "SAND";<br>
+strcmp(str1, str2);</pre><br><br>
+<li> This will return an integer value "- 10" which is the difference in the ASCII
+values of the first mismatching letters "D" and "N"<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+* Note: the integer value obtained as the difference may be assigned to an
+integer variable as follows:</pre><br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+int n;<br>
+n = strcmp(str1, str2);</pre><br></div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">READING / WRITING STRINGS:</span><br><br>
+<li> We use scanf ( ) function to read strings which do not have any white spaces.
+Ex: scanf(" %s ", Country );<br><br>
+<li> When this statement is executed, the user has to enter the Country name
+(eg "NEWYORK") without any white space (i.e not like "NEW YORK").
+<li> The white space in the string will terminate the reading and only "NEW" is
+assigned to Country.<br><br>
+<li> To read a string with white spaces gets( ) function or a loop can be used as.<br><br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+(i) gets(Country);</pre><br><br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+(ii) do ... while loop<br>
+i = 0;<br>
+do<br>
+{<br>
+Ch = getchar( );<br>
+Country[ i ] = ch;<br>
+i++;<br>
+}<br>
+while(ch ! = " \n ") ;<br>
+i - - ; <br>
+Country[ i ] = "\0";</pre><br><br>
+<li> The copy or assign a single character to a string variable, the assignment can be
+written as given below;<br>
+Country[ i ] = "N";<br>
+<li> When a string contains more than one character, the assignment is written as strcpy (Country, "NEW YORK");<br><br>
+
+</div><br>
+<div style="padding:5px;border:2px solid #eeeeee;box-shadow:1px 1px 1px 0px grey;">
+<span style="font-size:22px;color:violet;">Additional String Handling Functions:</span><br><br>
+ Some "C" compilers will accept the following string handling functions which are available in header files string.h and ctype.h Functions:<br><br>
+(i) <span style="font-size:22px;color:#226666;">strupr( ): </span>to convert all alphabets in a string to upper case letters.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+Ex: strupr(" code ")  ---> " CODE"<br></pre>
+(ii) <span style="font-size:22px;color:#226666;">strlwr( ):</span> To convert all alphabets in a string to lower case letters.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+Ex: strlwr(" CODE ")  ---> "code"<br></pre>
+ (iii)<span style="font-size:22px;color:#226666;">strrev( ): </span>To reverse a string<br>
+     <pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">Ex: strrev(" CODE ")  ---> "EDOC"<br></pre>
+(iv) <span style="font-size:22px;color:#226666;">strncmp( ):</span> To compare first n characters of two strings<br>.
+    <pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">Ex: m = strncmp (" Jony ", " Joey ", 3); ---> m = 9<br></pre>
+(v) <span style="font-size:22px;color:#226666;">strcmpi( ):</span> To compare two strings with case in sensitive (neglecting upper / lower case)<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">Ex: m=strcmpi(" VEGAS ", " vegas "); ---> m = 0.<br></pre>
+(vi) <span style="font-size:22px;color:#226666;">strncat( ):</span> To join specific number of letters to another string.<br>
+<pre style="line-height:100%;font-size:16px;font-family: monospace;
+                background-color: #E0E0E0;
+                padding: 15px;
+                margin: 5px;
+                border: solid;
+                border-width: 1px;
+                border-radius: 15px;
+                box-shadow: inset 1px 1px 10px grey, 0 0 1px grey;white-space: -pre-wrap;
+                white-space: -o-pre-wrap;
+                word-wrap: break-word;
+                white-space: pre-wrap;
+                white-space: -moz-pre-wrap;">
+Ex. char s1[10] = "Las"; char s2[10] = "Vegas"; strncat(s1,s2,3);  s1 will be "LasVeg".<br></pre>
+</span>
+</div>
+</body>

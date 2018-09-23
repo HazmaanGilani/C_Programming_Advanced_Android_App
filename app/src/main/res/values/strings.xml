@@ -1,0 +1,145 @@
+<resources>
+    <string name="app_name">C Programming</string>
+    <string name="action_settings">share</string>
+    <string name="action_share">Rate it!</string>
+    <string name="action_suggest">Email me!</string>
+    <string name="action_report">Report a Bug</string>
+    <string name="action_feedback">Feedback</string>
+
+
+
+
+
+    <string-array name="ProgramList_basic">
+        <item>HelloWorld</item>
+        <item>Add Two Numbers</item>
+        <item>Reverse Number</item>
+        <item>Swap Numbers</item>
+        <item>Even or Odd</item>
+        <item>Fibbonacci Series</item>
+        <item>ArmStrong Number</item>
+        <item>Palindrome</item>
+        <item>Perfect Number</item>
+        <item>Check Number is Prime</item>
+        <item>Print Prime Numbers</item>
+        <item>Power of a Number</item>
+        <item>Factorial of a Number</item>
+        <item>Strong Number</item>
+        <item>LCM and GCD of Number</item>
+        <item>SquareRoot of Number</item>
+        <item>Gross Salary</item>
+        <item>Calculator</item>
+        <item>Roots of Quadratic Equation</item>
+        <item>SimpleInterest</item>
+        <item>Temperature Converter</item>
+        <item>Time Converter</item>
+        <item>Distance Converter</item>
+        <item>LeapYear</item>
+        <item>PrintTable</item>
+        <item>Area and Circumfrence of a Circle</item>
+        <item>Area of Triangle</item>
+        <item>Binary to Decimal</item>
+        <item>Decimal to Octal</item>
+        <item>Decimal to Hexadecimal</item>
+        <item>Shutdown Computer</item>
+        <item>IP Address</item>
+        <item>EvenOdd nos in an Array</item>
+        <item>Max no in an Array</item>
+        <item>Reverse an Array</item>
+        <item>Swap two Arrays</item>
+        <item>Matrix Subtraction</item>
+        <item>Sum of Diagonal of Matrix</item>
+        <item>Matrix Multiplication</item>
+        <item>Floyd Triangle Pattern</item>
+        <item>Star Triangle Pattern</item>
+        <item>Star Pattern2</item>
+        <item>Alphabetical Pattern1</item>
+        <item>Alphabetical Pattern2</item>
+        <item>Number pattern</item>
+        <item>ASCII value</item>
+        <item>Check uppercase or lowercase</item>
+        <item>Convert upperCase into LowerCase</item>
+        <item>String Length without using String library function</item>
+        <item>String Length using library function</item>
+        <item>String Concatenation</item>
+        <item>Write Data To File</item>
+        <item>Read From File</item>
+
+
+    </string-array>
+    <string-array name="ProgramList_advance">
+        <item>Bubble Sort</item>
+        <item>Insertion Sort</item>
+        <item>Selection Sort</item>
+        <item>Quick Sort</item>
+        <item>Merge Sort</item>
+        <item>Heap Sort</item>
+        <item>Radix Sort</item>
+        <item>Shell sort</item>
+        <item>Linear Search</item>
+        <item>Binary Search</item>
+        <item>Interpolation Search</item>
+        <item>Execution Time</item>
+        <item>Tower of Hanoi</item>
+        <item>Calender</item>
+        <item>Breadth First Search</item>
+        <item>Infix to Postfix</item>
+        <item>Evaluation of Postfix Expression</item>
+
+
+    </string-array>
+    <string-array name="ProgramList_ds">
+        <item>Stack using Array</item>
+        <item>Stack using LinkedList</item>
+        <item>Queue using Array</item>
+        <item>Queue using LinkedList</item>
+        <item>Circular Queue</item>
+        <item>Priority Queue</item>
+        <item>Single Linked List</item>
+        <item>Reverse LinkedList</item>
+        <item>Doubly Linked List</item>
+        <item>Circular LinkedList</item>
+        <item>Binary Search Tree</item>
+    </string-array>
+    <string-array name="TopicList_fundamental">
+        <item>Introduction</item>
+        <item>Development with C</item>
+        <item>Hello C</item>
+        <item>Identifier and Keywords</item>
+        <item>DataTypes and Modifiers</item>
+        <item>Variables</item>
+        <item>Constants</item>
+        <item>Operator</item>
+        <item>Operator Precedence</item>
+        <item>TypeCasting</item>
+        <item>IF Else</item>
+        <item>Switch</item>
+        <item>Loops</item>
+        <item>Break and Continue</item>
+        <item>Array</item>
+        <item>Functions</item>
+        <item>Recursion</item>
+        <item>Pointers</item>
+        <item>pointer Arithematic</item>
+        <item>Strings</item>
+        <item>Structure</item>
+        <item>Bit Field</item>
+        <item>Union</item>
+        <item>Files</item>
+        <item>Preprocessor directives</item>
+    </string-array>
+    <string-array name="TopicList_ds">
+        <item>Introduction</item>
+        <item>Stack</item>
+        <item>Queue</item>
+        <item>Dequeue and Prority Queue</item>
+        <item>Circular Queue</item>
+        <item>LinkedList</item>
+        <item>Trees</item>
+        <item>Graphs</item>
+    </string-array>
+    <string name="title_activity_program_list">ProgramList</string>
+    <string name="title_activity_detail">Detail</string>
+    <string name="title_activity_quiz">Quiz</string>
+    <string name="title_activity_faq">FAQ</string>
+</resources>
