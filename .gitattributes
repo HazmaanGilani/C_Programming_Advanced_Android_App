@@ -1,2 +1,1 @@
-* linguist-vendored
-*.HTML linguist-vendored=false
+app/src/main/assets/* linguist-vendored
